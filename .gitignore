@@ -24,4 +24,4 @@ yarn-error.log*
 
 # setup files
 /setup-files-hotel-react-app
-/images
+/src/images
