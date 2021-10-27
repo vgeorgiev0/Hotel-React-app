@@ -1,26 +1,29 @@
-import { Fragment } from 'react/cjs/react.production.min';
+import React from 'react';
 import './App.css';
-import Rooms from './pages/Rooms';
+
 import Home from './pages/Home';
+import Rooms from './pages/Rooms';
 import SingleRoom from './pages/SingleRoom';
 import Error from './pages/Error';
-import { Route, Switch } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
+
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Fragment>
+    <>
       <Navbar />
+      <br />
+      <br />
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/rooms/' exact component={Rooms} />
-        <Route path='/rooms/:slug' exact component={SingleRoom} />
+        <Route exact path='/' component={Home} />
+        <Route exact path='/rooms/' component={Rooms} />
+        <Route exact path='/rooms/:slug' component={SingleRoom} />
         <Route component={Error} />
       </Switch>
-    </Fragment>
+    </>
   );
 }
 
 export default App;
-
-// https://www.youtube.com/watch?v=LXJOvkVYQqA&t=405s    1:11:07

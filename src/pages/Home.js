@@ -17,6 +17,9 @@ const Home = () => {
       </Hero>
       <Services />
       <FeaturedRooms />
+      <footer>
+        <p>kosta</p>
+      </footer>
     </>
   );
 };
