@@ -119,7 +119,6 @@ const RoomFilter = ({ rooms }) => {
         </div>
         {/* End of size */}
         {/* Extras  */}
-        {/* End of extras */}
         <div className='form-group'>
           <div className='single-extra'>
             <input
@@ -127,21 +126,21 @@ const RoomFilter = ({ rooms }) => {
               name='breakfast'
               id='breakfast'
               checked={breakfast}
-              onchange={handleChange}
+              onChange={handleChange}
             />
-            <label htmlFor='breakfast'>Breakfast</label>
+            <label htmlFor='breakfast'>breakfast</label>
           </div>
           <div className='single-extra'>
             <input
               type='checkbox'
               name='pets'
-              id='pets'
               checked={pets}
-              onchange={handleChange}
+              onChange={handleChange}
             />
-            <label htmlFor='pets'>Pets</label>
+            <label htmlFor='breakfast'>pets</label>
           </div>
         </div>
+        {/* End of extras */}
       </form>
     </section>
   );
