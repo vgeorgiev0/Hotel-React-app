@@ -52,7 +52,7 @@ const RoomFilter = ({ rooms }) => {
     <section className='filter-container'>
       <Title title='search rooms' />
       <form className='filter-form'>
-        {/* select type */}
+        {/* Select type */}
         <div className='form-group'>
           <label htmlFor='type'>room type</label>
           <select
@@ -65,8 +65,8 @@ const RoomFilter = ({ rooms }) => {
             {types}
           </select>
         </div>
-        {/* end select type */}
-        {/* guests */}
+        {/* End select type */}
+        {/* Guests */}
         <div className='form-group'>
           <label htmlFor='capacity'>room type</label>
           <select
@@ -79,7 +79,69 @@ const RoomFilter = ({ rooms }) => {
             {people}
           </select>
         </div>
-        {/* end of guests */}
+        {/* End of guests */}
+        {/* Room price */}
+        <div className='form-group'>
+          <label htmlFor='price'>Room price $ {price}</label>
+          <input
+            type='range'
+            name='price'
+            min={minPrice}
+            max={maxPrice}
+            id='price'
+            value={price}
+            onChange={handleChange}
+            className='form-control'
+          />
+        </div>
+        {/* End of room price */}
+        {/* Size */}
+        <div className='form-group'>
+          <label htmlFor='size'>room size</label>
+          <div className='size-inputs'>
+            <input
+              type='number'
+              name='minSize'
+              value={minSize}
+              id='size'
+              onChange={handleChange}
+              className='size-input'
+            />
+            <input
+              type='number'
+              name='maxSize'
+              value={maxSize}
+              id='size'
+              onChange={handleChange}
+              className='size-input'
+            />
+          </div>
+        </div>
+        {/* End of size */}
+        {/* Extras  */}
+        {/* End of extras */}
+        <div className='form-group'>
+          <div className='single-extra'>
+            <input
+              type='checkbox'
+              name='breakfast'
+              id='breakfast'
+              checked={breakfast}
+              onchange={handleChange}
+            />
+            <label htmlFor='breakfast'>Breakfast</label>
+          </div>
+          <div className='single-extra'>
+            <input
+              type='checkbox'
+              name='pets'
+              id='pets'
+              checked={pets}
+              onchange={handleChange}
+            />
+            <label htmlFor='pets'>Pets</label>
+          </div>
+        </div>
       </form>
     </section>
   );
