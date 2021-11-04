@@ -160,14 +160,16 @@ h6 {
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-  background: url('./images/defaultBcg.jpeg') center/cover no-repeat;
+  background: url('./images/main.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .roomsHero {
-  background-image: url('./images/room-2.jpeg');
-  min-height: 60vh;
+  background-image: url('./images/DSCN8304.JPG');
+  max-width: 100%;
+  height: auto;
+  min-height: 88vh;
 }
 /* End of Hero */
 /* Banner */

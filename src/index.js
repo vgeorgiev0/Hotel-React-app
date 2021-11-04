@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { RoomProvider } from './context';
+import './i18n';
 
 ReactDOM.render(
   <RoomProvider>
     <React.StrictMode>
       <Router>
-        <App />
+        <Suspense fallback={<div>Loading...</div>}>
+          <App />
+        </Suspense>
       </Router>
     </React.StrictMode>
   </RoomProvider>,
