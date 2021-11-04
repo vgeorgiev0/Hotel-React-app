@@ -443,7 +443,7 @@ const data = [
       id: '8',
     },
     fields: {
-      name: 'apartment deki',
+      name: 'deki',
       slug: 'apartment-deki',
       type: 'double',
       price: 400,
@@ -685,7 +685,7 @@ const data = [
       id: '12',
     },
     fields: {
-      name: 'Apartment Tina',
+      name: 'tina',
       slug: 'apartment-tina',
       type: 'family',
       price: 500,
@@ -770,7 +770,7 @@ const data = [
       id: '13',
     },
     fields: {
-      name: 'apartment eli',
+      name: 'eli',
       slug: 'apartment-eli',
       type: 'presidential',
       price: 600,
