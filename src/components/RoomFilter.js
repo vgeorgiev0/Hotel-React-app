@@ -50,11 +50,11 @@ const RoomFilter = ({ rooms }) => {
 
   return (
     <section className='filter-container'>
-      <Title title='search rooms' />
+      <Title title='search apartments' />
       <form className='filter-form'>
         {/* Select type */}
         <div className='form-group'>
-          <label htmlFor='type'>room type</label>
+          <label htmlFor='type'>apartment type</label>
           <select
             name='type'
             id='type'
@@ -68,7 +68,7 @@ const RoomFilter = ({ rooms }) => {
         {/* End select type */}
         {/* Guests */}
         <div className='form-group'>
-          <label htmlFor='capacity'>room type</label>
+          <label htmlFor='capacity'>apartment capacity</label>
           <select
             name='capacity'
             id='capacity'
@@ -82,7 +82,7 @@ const RoomFilter = ({ rooms }) => {
         {/* End of guests */}
         {/* Room price */}
         <div className='form-group'>
-          <label htmlFor='price'>Room price $ {price}</label>
+          <label htmlFor='price'>apartment price $ {price}</label>
           <input
             type='range'
             name='price'
@@ -97,7 +97,7 @@ const RoomFilter = ({ rooms }) => {
         {/* End of room price */}
         {/* Size */}
         <div className='form-group'>
-          <label htmlFor='size'>room size</label>
+          <label htmlFor='size'>apartment size</label>
           <div className='size-inputs'>
             <input
               type='number'
