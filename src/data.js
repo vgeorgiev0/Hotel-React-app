@@ -2,6 +2,29 @@ import room1 from './images/details-1.jpeg';
 import room2 from './images/details-2.jpeg';
 import room3 from './images/details-3.jpeg';
 import room4 from './images/details-4.jpeg';
+import deki1 from './images/deki/1.JPG';
+import deki2 from './images/deki/2.JPG';
+import deki3 from './images/deki/3.JPG';
+import deki4 from './images/deki/4.JPG';
+import deki5 from './images/deki/5.JPG';
+import deki6 from './images/deki/6.JPG';
+
+import tinamain from './images/tina/main.JPG';
+import tina1 from './images/tina/1.JPG';
+import tina2 from './images/tina/2.JPG';
+import tina3 from './images/tina/3.JPG';
+import tina4 from './images/tina/4.JPG';
+import tina5 from './images/tina/5.JPG';
+import tina6 from './images/tina/6.JPG';
+import tina7 from './images/tina/7.JPG';
+
+import eli1 from './images/eli/1.jpg';
+import eli2 from './images/eli/2.jpg';
+import eli3 from './images/eli/3.jpg';
+import eli4 from './images/eli/4.jpg';
+import eli5 from './images/eli/5.jpg';
+import eli6 from './images/eli/6.jpg';
+
 import img1 from './images/room-1.jpeg';
 import img2 from './images/room-2.jpeg';
 import img3 from './images/room-3.jpeg';
@@ -420,8 +443,8 @@ const data = [
       id: '8',
     },
     fields: {
-      name: 'double deluxe',
-      slug: 'double-deluxe',
+      name: 'apartment deki',
+      slug: 'apartment-deki',
       type: 'double',
       price: 400,
       size: 500,
@@ -444,28 +467,42 @@ const data = [
         {
           fields: {
             file: {
-              url: img8,
+              url: deki1,
             },
           },
         },
         {
           fields: {
             file: {
-              url: room2,
+              url: deki2,
             },
           },
         },
         {
           fields: {
             file: {
-              url: room3,
+              url: deki3,
             },
           },
         },
         {
           fields: {
             file: {
-              url: room4,
+              url: deki4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: deki5,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: deki6,
             },
           },
         },
@@ -648,8 +685,8 @@ const data = [
       id: '12',
     },
     fields: {
-      name: 'family deluxe',
-      slug: 'family-deluxe',
+      name: 'Apartment Tina',
+      slug: 'apartment-tina',
       type: 'family',
       price: 500,
       size: 700,
@@ -672,28 +709,56 @@ const data = [
         {
           fields: {
             file: {
-              url: img12,
+              url: tinamain,
             },
           },
         },
         {
           fields: {
             file: {
-              url: room2,
+              url: tina1,
             },
           },
         },
         {
           fields: {
             file: {
-              url: room3,
+              url: tina2,
             },
           },
         },
         {
           fields: {
             file: {
-              url: room4,
+              url: tina3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: tina4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: tina5,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: tina6,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: tina7,
             },
           },
         },
@@ -705,8 +770,8 @@ const data = [
       id: '13',
     },
     fields: {
-      name: 'presidential',
-      slug: 'presidential-room',
+      name: 'apartment eli',
+      slug: 'apartment-eli',
       type: 'presidential',
       price: 600,
       size: 1000,
@@ -729,28 +794,42 @@ const data = [
         {
           fields: {
             file: {
-              url: room1,
+              url: eli1,
             },
           },
         },
         {
           fields: {
             file: {
-              url: room2,
+              url: eli2,
             },
           },
         },
         {
           fields: {
             file: {
-              url: room3,
+              url: eli3,
             },
           },
         },
         {
           fields: {
             file: {
-              url: room4,
+              url: eli4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: eli5,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: eli6,
             },
           },
         },

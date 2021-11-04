@@ -25,8 +25,8 @@ export default class SingleRoom extends Component {
       return (
         <div className='error'>
           <h3>No such room could be found...</h3>
-          <Link to='/rooms' className='btn-primary'>
-            Back to rooms
+          <Link to='/apartments' className='btn-primary'>
+            Back to apartments
           </Link>
         </div>
       );
@@ -48,9 +48,9 @@ export default class SingleRoom extends Component {
     return (
       <>
         <RoomImage img={mainImg || this.state.defaultBcg}>
-          <Banner title={`${name} room`}>
-            <Link to='/rooms' className='btn-primary'>
-              back to rooms
+          <Banner title={` apartment ${name} `}>
+            <Link to='/apartments' className='btn-primary'>
+              back to apartments
             </Link>
           </Banner>
         </RoomImage>
@@ -70,7 +70,7 @@ export default class SingleRoom extends Component {
               <h6>price : $ {price}</h6>
               <h6>size : {size}SQFT</h6>
               <h6>
-                max capacity :
+                capacity :
                 {capacity > 1 ? ` ${capacity} people` : `${capacity} person`}
               </h6>
               <h6>{pets ? 'pets allowed' : 'no pets allowed'}</h6>
