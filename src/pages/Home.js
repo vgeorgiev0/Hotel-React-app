@@ -4,14 +4,15 @@ import Hero from '../components/Hero';
 import { Link } from 'react-router-dom';
 import Services from '../components/Services';
 import FeaturedRooms from '../components/FeaturedRooms';
-import { Trans, useTranslation } from 'react-i18next';
+// import { Trans, useTranslation } from 'react-i18next';
+import DefaultMap from '../components/Maps';
 
 const Home = (props) => {
-  const { t, i18n } = useTranslation();
+  // const { t, i18n } = useTranslation();
 
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
+  // const changeLanguage = (language) => {
+  //   i18n.changeLanguage(language);
+  // };
 
   return (
     <>
@@ -24,6 +25,7 @@ const Home = (props) => {
       </Hero>
       <Services />
       <FeaturedRooms />
+      <DefaultMap />
       <footer></footer>
     </>
   );

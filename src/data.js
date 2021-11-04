@@ -1,4 +1,4 @@
-import room1 from './images/details-1.jpeg';
+// import room1 from './images/details-1.jpeg';
 import room2 from './images/details-2.jpeg';
 import room3 from './images/details-3.jpeg';
 import room4 from './images/details-4.jpeg';
@@ -32,11 +32,11 @@ import img4 from './images/room-4.jpeg';
 import img5 from './images/room-5.jpeg';
 import img6 from './images/room-6.jpeg';
 import img7 from './images/room-7.jpeg';
-import img8 from './images/room-8.jpeg';
+// import img8 from './images/room-8.jpeg';
 import img9 from './images/room-9.jpeg';
 import img10 from './images/room-10.jpeg';
 import img11 from './images/room-11.jpeg';
-import img12 from './images/room-12.jpeg';
+// import img12 from './images/room-12.jpeg';
 
 const data = [
   {
