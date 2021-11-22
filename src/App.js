@@ -32,13 +32,13 @@ function App() {
         <button onClick={() => changeLanguage('bg')} className='btn-primary'>
           bg
         </button>
-        <button onClick={() => changeLanguage('bg')} className='btn-primary'>
-          srb
+        <button onClick={() => changeLanguage('rs')} className='btn-primary'>
+          rs
         </button>
-        <button onClick={() => changeLanguage('bg')} className='btn-primary'>
+        <button onClick={() => changeLanguage('it')} className='btn-primary'>
           it
         </button>
-        <button onClick={() => changeLanguage('bg')} className='btn-primary'>
+        <button onClick={() => changeLanguage('de')} className='btn-primary'>
           de
         </button>
       </div>
