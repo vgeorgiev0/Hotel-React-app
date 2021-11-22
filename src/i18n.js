@@ -10,6 +10,7 @@ i18n
   .use(HttpApi)
   .use(initReactI18next)
   .init({
+    supportedLngs: ['en', 'bg', 'de', 'it', 'rs'],
     fallbackLng: 'en',
     debug: true,
     detection: {

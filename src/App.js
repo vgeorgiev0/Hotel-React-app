@@ -13,12 +13,19 @@ import Navbar from './components/Navbar';
 import { Switch, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 
+import bgFlag from './images/flag/bgFlag.png';
+import deFlag from './images/flag/deFlag.png';
+import itFlag from './images/flag/itFlag.png';
+import rsFlag from './images/flag/rsFlag.png';
+import usFlag from './images/flag/usFlag.png';
+
 function App() {
   const { i18n } = useTranslation();
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   };
+
   return (
     <>
       <Navbar />
@@ -26,19 +33,24 @@ function App() {
       <br />
       <br />
       <div className='language-btn'>
-        <button onClick={() => changeLanguage('en')} className='btn-primary'>
-          en
-        </button>
-        <button onClick={() => changeLanguage('bg')} className='btn-primary'>
-          bg
-        </button>
-        <button onClick={() => changeLanguage('rs')} className='btn-primary'>
+        <button onClick={() => changeLanguage('rs')}>
+          <img src={rsFlag} alt='flagRS' />
           rs
         </button>
-        <button onClick={() => changeLanguage('it')} className='btn-primary'>
+        <button onClick={() => changeLanguage('en')}>
+          <img src={usFlag} alt='flagUS' />
+          en
+        </button>
+        <button onClick={() => changeLanguage('bg')}>
+          <img src={bgFlag} alt='flagBG' />
+          bg
+        </button>
+        <button onClick={() => changeLanguage('it')}>
+          <img src={itFlag} alt='flagIT' />
           it
         </button>
-        <button onClick={() => changeLanguage('de')} className='btn-primary'>
+        <button onClick={() => changeLanguage('de')}>
+          <img src={deFlag} alt='flagDE' />
           de
         </button>
       </div>

@@ -621,5 +621,21 @@ textarea {
 /* Language buttons */
 .language-btn {
   background: var(--offWhite);
+  text-align: right;
+  letter-spacing: var(--mainSpacing);
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
 }
+.language-btn button {
+  letter-spacing: var(--mainSpacing);
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+}
+.language-btn button:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
 /* End of Language buttons */
