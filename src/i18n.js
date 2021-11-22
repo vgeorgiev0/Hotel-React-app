@@ -2,20 +2,23 @@ import i18n from 'i18next';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
+import HttpApi from 'i18next-http-backend';
 
 i18n
   .use(Backend)
   .use(LanguageDetector)
+  .use(HttpApi)
   .use(initReactI18next)
   .init({
+    supportedLngs: ['en', 'bg', 'de', 'it', 'rs'],
     fallbackLng: 'en',
     debug: true,
     detection: {
-      order: ['queryString', 'cookie'],
-      cache: ['cookie'],
+      order: ['cookie', 'htmlTag', 'localStorage', 'path', 'subdomain'],
+      caches: ['cookie'],
     },
-    interpolation: {
-      escapeValue: false,
+    backend: {
+      loadPath: './locales/{{lng}}/translation.json',
     },
   });
 

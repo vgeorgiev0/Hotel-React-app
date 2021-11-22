@@ -4,28 +4,30 @@ import Hero from '../components/Hero';
 import { Link } from 'react-router-dom';
 import Services from '../components/Services';
 import FeaturedRooms from '../components/FeaturedRooms';
-import { Trans, useTranslation } from 'react-i18next';
+import DefaultMap from '../components/Maps';
+import { Trans } from 'react-i18next';
 
 const Home = (props) => {
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
+  const mainTitle = (
+    <Trans i18nKey='mainTitle'>'Welcome to Rural household Morava ŽIS</Trans>
+  );
+  const mainSubtitle = (
+    <Trans i18nKey='mainSubtitle'>Wonderful place to enjoy.</Trans>
+  );
 
   return (
-    <>
+    <div>
       <Hero>
-        <Banner title='Welcome to ŽIS' subtitle='Come and stay with us'>
+        <Banner title={mainTitle} subtitle={mainSubtitle}>
           <Link to='/apartments' className='btn-primary'>
-            Our Apartments
+            <Trans i18nKey='btn1'>Our apartments</Trans>
           </Link>
         </Banner>
       </Hero>
       <Services />
       <FeaturedRooms />
-      <footer></footer>
-    </>
+      <DefaultMap />
+    </div>
   );
 };
 
