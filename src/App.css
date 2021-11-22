@@ -619,18 +619,7 @@ textarea {
 /* End of Contact Form*/
 
 /* Language buttons */
-.selected-lang {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-}
-.selected-lang::before {
-  content: '';
-  display: block;
-  width: 32px;
-  height: 32px;
-  background-image: (
-    '/home/vgeorgiev/Project/restaurant/first/Hotel-React-app/src/images/flag/bulgaria-flag-icon-32.png'
-  );
+.language-btn {
+  background: var(--offWhite);
 }
 /* End of Language buttons */
