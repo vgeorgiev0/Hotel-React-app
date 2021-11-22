@@ -1,42 +1,107 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaAlignRight } from 'react-icons/fa';
 import logo from '../images/logo.png';
-export default class Navbar extends Component {
-  state = {
-    isOpen: false,
+import { Trans } from 'react-i18next';
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    if (isOpen === false) {
+      setIsOpen(true);
+    } else {
+      setIsOpen(false);
+    }
   };
-  handleToggle = () => {
-    this.setState({ isOpen: !this.state.isOpen });
-  };
-  render() {
-    return (
-      <nav className='navbar'>
-        <div className='nav-center'>
-          <div className='nav-header'>
-            <Link className='nav-logo' to='/'>
-              <img width='30%' src={logo} alt='ZIS' />
-            </Link>
-            <button
-              type='button'
-              className='nav-btn'
-              onClick={this.handleToggle}
-            >
-              <FaAlignRight className='nav-icon' />
-            </button>
-          </div>
-          <ul
-            className={this.state.isOpen ? 'nav-links show-nav' : 'nav-links'}
-          >
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/apartments'>Apartments</Link>
-            </li>
-          </ul>
+
+  const home = <Trans i18nKey='home'></Trans>;
+  const apartments = <Trans i18nKey='apartments'></Trans>;
+  const about = <Trans i18nKey='about'></Trans>;
+
+  return (
+    <nav className='navbar'>
+      <div className='nav-center'>
+        <div className='nav-header'>
+          <Link className='nav-logo' to='/'>
+            <img width='30%' src={logo} alt='ZIS' />
+          </Link>
+          <button type='button' className='nav-btn' onClick={handleToggle}>
+            <FaAlignRight className='nav-icon' />
+          </button>
         </div>
-      </nav>
-    );
-  }
-}
+        <ul className={isOpen ? 'nav-links show-nav' : 'nav-links'}>
+          <li>
+            <Link onClick={handleToggle} to='/'>
+              {home}
+            </Link>
+          </li>
+          <li>
+            <Link onClick={handleToggle} to='/apartments'>
+              {apartments}
+            </Link>
+          </li>
+          <li>
+            <Link onClick={handleToggle} to='/about'>
+              {about}
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
+
+// class Navbar extends Component {
+//   state = {
+//     isOpen: false,
+//   };
+//   handleToggle = () => {
+//     this.setState({ isOpen: !this.state.isOpen });
+//   };
+
+//   render() {
+//     const { t } = this.props;
+//     return (
+//       <nav className='navbar'>
+//         <div className='nav-center'>
+//           <div className='nav-header'>
+//             <Link className='nav-logo' to='/'>
+//               <img width='30%' src={logo} alt='ZIS' />
+//             </Link>
+//             <button
+//               type='button'
+//               className='nav-btn'
+//               onClick={this.handleToggle}
+//             >
+//               <FaAlignRight className='nav-icon' />
+//             </button>
+//           </div>
+//           <ul
+//             className={this.state.isOpen ? 'nav-links show-nav' : 'nav-links'}
+//           >
+//             <li>
+//               <Link onClick={this.handleToggle} to='/'>
+//                 {t('home')}
+//               </Link>
+//             </li>
+//             <li>
+//               <Link onClick={this.handleToggle} to='/apartments'>
+//                 {t('apartments')}
+//               </Link>
+//             </li>
+//             <li>
+//               <Link onClick={this.handleToggle} to='/about'>
+//                 {t('about')}
+//               </Link>
+//             </li>
+//           </ul>
+//         </div>
+//       </nav>
+//     );
+//   }
+// }
+
+// export default withTranslation()(Navbar);

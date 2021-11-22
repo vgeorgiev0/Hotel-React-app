@@ -3,14 +3,17 @@ import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import { Link } from 'react-router-dom';
 import RoomContainer from '../components/RoomContainer';
+import { Trans } from 'react-i18next';
 
 const Rooms = () => {
+  const title = <Trans i18nKey='apartmentsTitle'></Trans>;
+  const btn = <Trans i18nKey='btn2'></Trans>;
   return (
     <>
       <Hero hero='roomsHero'>
-        <Banner title='Our apartments'>
+        <Banner title={title}>
           <Link className='btn-primary' to='/'>
-            Return Home
+            {btn}
           </Link>
         </Banner>
       </Hero>
