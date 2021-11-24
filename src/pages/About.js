@@ -3,9 +3,9 @@ import ContactContainer from '../components/ContactContainer';
 
 const About = () => {
   return (
-    <>
+    <div>
       <ContactContainer />
-    </>
+    </div>
   );
 };
 
