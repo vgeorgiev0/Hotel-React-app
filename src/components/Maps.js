@@ -31,7 +31,7 @@ import {
   Marker,
 } from 'react-google-maps';
 
-const googleApi = 'AIzaSyCHh-rT8b0UPdnFMmx5L1buoZweDhM-SMU';
+const googleApi = process.env.API_URL;
 
 const MyMapComponent = compose(
   withProps({
