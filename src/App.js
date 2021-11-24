@@ -29,8 +29,7 @@ function App() {
   return (
     <>
       <Navbar />
-
-      <br />
+      <br/>
       <br />
       <div className='language-btn'>
         <button onClick={() => changeLanguage('rs')}>
