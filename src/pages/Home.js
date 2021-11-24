@@ -6,6 +6,7 @@ import Services from '../components/Services';
 import FeaturedRooms from '../components/FeaturedRooms';
 import DefaultMap from '../components/Maps';
 import { Trans } from 'react-i18next';
+import Carousel from '../components/Carousel';
 
 const Home = (props) => {
   const mainTitle = (
@@ -25,6 +26,7 @@ const Home = (props) => {
         </Banner>
       </Hero>
       <Services />
+      <Carousel />
       <FeaturedRooms />
       <DefaultMap />
     </div>

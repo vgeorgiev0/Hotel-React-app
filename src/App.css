@@ -639,3 +639,9 @@ textarea {
 }
 
 /* End of Language buttons */
+
+/* Carousel */
+.carousel {
+  margin: 32px;
+}
+/* End of Carousel */
