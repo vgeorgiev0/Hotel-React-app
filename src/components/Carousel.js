@@ -8,6 +8,14 @@ import c5 from '../images/carousel/c5.jpg';
 import c6 from '../images/carousel/c6.jpg';
 import c7 from '../images/carousel/c7.jpg';
 import c8 from '../images/carousel/c8.jpg';
+import c9 from '../images/carousel/c9.jpg';
+import c10 from '../images/carousel/c10.jpg';
+import c11 from '../images/carousel/c11.jpg';
+import c12 from '../images/carousel/c12.jpg';
+import c13 from '../images/carousel/c13.jpeg';
+import c14 from '../images/carousel/c14.jpeg';
+import c15 from '../images/carousel/c15.jpeg';
+import c16 from '../images/carousel/c16.jpg';
 
 export default class Carousel extends Component {
   render() {
@@ -15,9 +23,13 @@ export default class Carousel extends Component {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      focusOnSelect: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
       initialSlide: 0,
+      pauseOnHover: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -75,6 +87,30 @@ export default class Carousel extends Component {
           </div>
           <div>
             <img src={c8} alt='image8' />
+          </div>
+          <div>
+            <img src={c9} alt='image9' />
+          </div>
+          <div>
+            <img src={c10} alt='image10' />
+          </div>
+          <div>
+            <img src={c11} alt='image11' />
+          </div>
+          <div>
+            <img src={c12} alt='image12' />
+          </div>
+          <div>
+            <img src={c13} alt='image13' />
+          </div>
+          <div>
+            <img src={c14} alt='image14' />
+          </div>
+          <div>
+            <img src={c15} alt='image15' />
+          </div>
+          <div>
+            <img src={c16} alt='image16' />
           </div>
         </Slider>
       </div>

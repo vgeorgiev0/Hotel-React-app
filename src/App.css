@@ -457,7 +457,7 @@ h6 {
   grid-column-gap: 50px;
 }
 .single-room-images img {
-  width: 100%;
+  width: 90%;
   display: block;
 }
 .single-room-info {
