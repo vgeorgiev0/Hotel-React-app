@@ -22,6 +22,8 @@ const Home = (props) => {
   const mainSubtitle = (
     <Trans i18nKey='mainSubtitle'>Wonderful place to enjoy.</Trans>
   );
+  const intro = <Trans i18nKey='intro'></Trans>;
+  const introDesc = <Trans i18nKey='introDesc'></Trans>;
 
   return (
     <div className='grids'>
@@ -46,7 +48,7 @@ const Home = (props) => {
         data-aos-easing='ease-in-sine'
         data-aos-duration='600'
       >
-        <Intro />
+        <Intro intro={intro} introDesc={introDesc} />
       </div>
       <div
         data-aos='fade-zoom-in'
