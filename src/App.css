@@ -178,12 +178,12 @@ h6 {
 /* End of Hero */
 /* Banner */
 .banner {
+  transition-delay: 0.1s;
   display: inline-block;
   background: rgba(0, 0, 0, 0.5);
   color: var(--mainWhite);
   padding: 2rem 1rem;
   text-align: center;
-  text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
 }
 .banner h1 {
@@ -644,4 +644,5 @@ textarea {
 .carousel {
   margin: 32px;
 }
+
 /* End of Carousel */

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '../components/Banner';
 import Hero from '../components/Hero';
 import { Link } from 'react-router-dom';
@@ -7,8 +7,15 @@ import FeaturedRooms from '../components/FeaturedRooms';
 import DefaultMap from '../components/Maps';
 import { Trans } from 'react-i18next';
 import Carousel from '../components/Carousel';
+import Intro from '../components/Intro';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = (props) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const mainTitle = (
     <Trans i18nKey='mainTitle'>'Welcome to Rural household Morava ŽIS</Trans>
   );
@@ -17,7 +24,7 @@ const Home = (props) => {
   );
 
   return (
-    <div>
+    <div className='grids'>
       <Hero>
         <Banner title={mainTitle} subtitle={mainSubtitle}>
           <Link to='/apartments' className='btn-primary'>
@@ -25,9 +32,38 @@ const Home = (props) => {
           </Link>
         </Banner>
       </Hero>
-      <Services />
-      <Carousel />
-      <FeaturedRooms />
+      <div
+        data-aos='fade-zoom-in'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
+        <Services />
+      </div>
+      <div
+        data-aos='fade-zoom-in'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
+        <Intro />
+      </div>
+      <div
+        data-aos='fade-zoom-in'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
+        <Carousel />
+      </div>
+      <div
+        data-aos='fade-zoom-in'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
+        <FeaturedRooms />
+      </div>
       <DefaultMap />
     </div>
   );

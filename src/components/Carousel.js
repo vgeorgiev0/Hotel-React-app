@@ -17,6 +17,8 @@ import c14 from '../images/carousel/c14.jpeg';
 import c15 from '../images/carousel/c15.jpeg';
 import c16 from '../images/carousel/c16.jpg';
 
+// TODO Change image c10 with wider image
+
 export default class Carousel extends Component {
   render() {
     const settings = {
@@ -68,16 +70,10 @@ export default class Carousel extends Component {
             <img src={c1} alt='image1' />
           </div>
           <div>
-            <img src={c2} alt='image2' />
-          </div>
-          <div>
-            <img src={c3} alt='image3' />
+            <img src={c9} alt='image9' />
           </div>
           <div>
             <img src={c4} alt='image4' />
-          </div>
-          <div>
-            <img src={c5} alt='image5' />
           </div>
           <div>
             <img src={c6} alt='image6' />
@@ -86,13 +82,16 @@ export default class Carousel extends Component {
             <img src={c7} alt='image7' />
           </div>
           <div>
+            <img src={c2} alt='image2' />
+          </div>
+          <div>
             <img src={c8} alt='image8' />
           </div>
           <div>
-            <img src={c9} alt='image9' />
+            <img src={c10} alt='image10' />
           </div>
           <div>
-            <img src={c10} alt='image10' />
+            <img src={c3} alt='image3' />
           </div>
           <div>
             <img src={c11} alt='image11' />
@@ -105,6 +104,9 @@ export default class Carousel extends Component {
           </div>
           <div>
             <img src={c14} alt='image14' />
+          </div>
+          <div>
+            <img src={c5} alt='image5' />
           </div>
           <div>
             <img src={c15} alt='image15' />
