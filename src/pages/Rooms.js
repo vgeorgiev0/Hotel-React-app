@@ -9,7 +9,7 @@ const Rooms = () => {
   const title = <Trans i18nKey='apartmentsTitle'></Trans>;
   const btn = <Trans i18nKey='btn2'></Trans>;
   return (
-    <>
+    <div>
       <Hero hero='roomsHero'>
         <Banner title={title}>
           <Link className='btn-primary' to='/'>
@@ -18,7 +18,7 @@ const Rooms = () => {
         </Banner>
       </Hero>
       <RoomContainer />
-    </>
+    </div>
   );
 };
 

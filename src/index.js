@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { RoomProvider } from './context';
+import Loading from './components/Loading';
 import './i18n';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -13,7 +14,7 @@ ReactDOM.render(
   <RoomProvider>
     <React.StrictMode>
       <Router>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading className='loading' />}>
           <App />
         </Suspense>
       </Router>
