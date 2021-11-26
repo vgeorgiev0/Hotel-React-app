@@ -58,7 +58,7 @@
   "eliExtra5": "Перална машина",
   "eliExtra6": "Ютия",
   "eliExtra7": "Електрическо одеало",
-  "apartmentEliTitle": "Апартамент \"Ели\"",
+  "apartmentEliTitle": "\"Ели\"",
   "apartmentEliDetails": "Апартамента разполага със спалня, хол, просторна баня и удобна кухня. Предрасполага за почивка по всяко време.",
   "apartmentEliExtra1": "Безплатен WiFi",
   "apartmentEliExtra2": "IPTV",
@@ -75,5 +75,14 @@
   "tinaExtra4": "Сешоар",
   "tinaExtra5": "Климатик",
   "tinaExtra6": "Ютия",
-  "tinaExtra7": "Електрическо одеало"
+  "tinaExtra7": "Електрическо одеало",
+  "flatTitle": "Цял Етаж",
+  "flatDetails": "Апартамента е напълно обзаведен и разполага с голяма спалня, баня и хол с кухненски бокс.",
+  "flatExtra1": "Безплатен WiFi",
+  "flatExtra2": "IPTV",
+  "flatExtra3": "Хладилник",
+  "flatExtra4": "Сешоар",
+  "flatExtra5": "Климатик",
+  "flatExtra6": "Ютия",
+  "flatExtra7": "Електрическо одеало"
 }

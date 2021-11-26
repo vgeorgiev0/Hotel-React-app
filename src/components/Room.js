@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import defaultImg from '../images/room-1.jpeg';
+import defaultImg from '../images/DSCN8304.JPG';
 import PropTypes from 'prop-types';
 import { Trans } from 'react-i18next';
 import { useTranslation } from 'react-i18next';

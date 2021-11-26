@@ -14,12 +14,30 @@ import tina5 from './images/tina/5.JPG';
 import tina6 from './images/tina/6.JPG';
 import tina7 from './images/tina/7.JPG';
 
-import eli1 from './images/eli/1.jpg';
-import eli2 from './images/eli/2.jpg';
-import eli3 from './images/eli/3.jpg';
-import eli4 from './images/eli/4.jpg';
-import eli5 from './images/eli/5.jpg';
-import eli6 from './images/eli/6.jpg';
+import roomEli1 from './images/eli/room/1.jpg';
+import roomEli2 from './images/eli/room/2.jpg';
+import roomEli3 from './images/eli/room/3.jpg';
+import roomEli4 from './images/eli/room/4.jpg';
+import roomEli5 from './images/eli/room/5.jpg';
+import roomEli6 from './images/eli/room/6.jpg';
+
+import apartmentEli1 from './images/eli/apartment/1.jpg';
+import apartmentEli2 from './images/eli/apartment/2.jpg';
+import apartmentEli3 from './images/eli/apartment/3.jpg';
+import apartmentEli4 from './images/eli/apartment/4.jpg';
+import apartmentEli5 from './images/eli/apartment/5.jpg';
+import apartmentEli6 from './images/eli/apartment/6.jpg';
+
+import flat1 from './images/flat/1.jpg';
+import flat2 from './images/flat/2.jpg';
+import flat3 from './images/flat/3.jpg';
+import flat4 from './images/flat/4.jpg';
+import flat5 from './images/flat/5.jpg';
+import flat6 from './images/flat/6.jpg';
+import flat7 from './images/flat/7.jpg';
+import flat8 from './images/flat/8.jpg';
+import flat9 from './images/flat/9.jpg';
+import flat10 from './images/flat/10.jpg';
 
 const data = [
   {
@@ -186,42 +204,42 @@ const data = [
         {
           fields: {
             file: {
-              url: eli1,
+              url: roomEli1,
             },
           },
         },
         {
           fields: {
             file: {
-              url: eli2,
+              url: roomEli2,
             },
           },
         },
         {
           fields: {
             file: {
-              url: eli3,
+              url: roomEli3,
             },
           },
         },
         {
           fields: {
             file: {
-              url: eli4,
+              url: roomEli4,
             },
           },
         },
         {
           fields: {
             file: {
-              url: eli5,
+              url: roomEli5,
             },
           },
         },
         {
           fields: {
             file: {
-              url: eli6,
+              url: roomEli6,
             },
           },
         },
@@ -253,42 +271,128 @@ const data = [
         {
           fields: {
             file: {
-              url: eli1,
+              url: apartmentEli1,
             },
           },
         },
         {
           fields: {
             file: {
-              url: eli2,
+              url: apartmentEli2,
             },
           },
         },
         {
           fields: {
             file: {
-              url: eli3,
+              url: apartmentEli3,
             },
           },
         },
         {
           fields: {
             file: {
-              url: eli4,
+              url: apartmentEli4,
             },
           },
         },
         {
           fields: {
             file: {
-              url: eli5,
+              url: apartmentEli5,
             },
           },
         },
         {
           fields: {
             file: {
-              url: eli6,
+              url: apartmentEli6,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: '5',
+    },
+    fields: {
+      name: 'flatTitle',
+      slug: 'flat',
+      price: 45,
+      size: 85,
+      capacity: 6,
+      description: 'flatDetails',
+      extras: ['flatExtra1', 'flatExtra2', 'flatExtra3'],
+      images: [
+        {
+          fields: {
+            file: {
+              url: flat1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: flat2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: flat3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: flat4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: flat5,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: flat6,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: flat7,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: flat8,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: flat9,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: flat10,
             },
           },
         },
