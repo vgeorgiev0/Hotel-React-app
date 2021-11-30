@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import { Link } from 'react-router-dom';
 import Services from '../components/Services';
 import FeaturedRooms from '../components/FeaturedRooms';
-import DefaultMap from '../components/Maps';
+// import DefaultMap from '../components/Maps';
 import { Trans } from 'react-i18next';
 import Carousel from '../components/Carousel';
 import Intro from '../components/Intro';
@@ -66,7 +66,6 @@ const Home = (props) => {
       >
         <FeaturedRooms />
       </div>
-      <DefaultMap />
     </div>
   );
 };

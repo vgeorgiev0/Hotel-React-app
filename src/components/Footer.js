@@ -34,7 +34,7 @@ const Footer = () => {
                 <a
                   className='footer-link'
                   target='_blank'
-                  rel='noreferrer'
+                  rel='noopener noreferrer'
                   href={item.info}
                 >
                   {item.description}
