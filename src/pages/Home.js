@@ -60,13 +60,20 @@ const Home = (props) => {
       </div>
       <div
         data-aos='fade-zoom-in'
+        data-aos-offset='400'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='800'
+      >
+        <FeaturedRooms />
+      </div>
+      <div
+        data-aos='fade-zoom-in'
         data-aos-offset='200'
         data-aos-easing='ease-in-sine'
         data-aos-duration='600'
       >
-        <FeaturedRooms />
+        <SimpleMap />
       </div>
-      <SimpleMap />
     </div>
   );
 };

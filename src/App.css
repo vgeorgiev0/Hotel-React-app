@@ -615,6 +615,68 @@ h6 {
 textarea {
   resize: none;
 }
+.container {
+  width: 900px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 6%;
+  box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+}
+@media (max-width: 920px) {
+  .container {
+    width: 90%;
+  }
+}
+.wrapper {
+  padding: 5px;
+  max-width: 960px;
+  width: 95%;
+  margin: 20px auto;
+}
+.columns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5px 0;
+  text-align: center;
+}
+.column {
+  flex: 1;
+  margin: 2px;
+  padding: 10px;
+}
+@media screen and (max-width: 980px) {
+  .columns .column {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .columns .column {
+    flex-basis: 100%;
+    margin: 0 0 5px 0;
+  }
+}
+.input {
+  width: 90%;
+  padding: 10px 0px 5px 2px;
+}
+.form-button {
+  padding: 15px 0px 10px 0px;
+}
+.form-submit {
+  display: inline-block;
+  width: 90%;
+}
 
 /* End of Contact Form*/
 
