@@ -5,7 +5,7 @@
 // import TextField from '@mui/material/TextField';
 // import Box from '@mui/material/Box';
 // import Container from '@mui/material/Container';
-// import emailjs from 'emailjs-com';
+
 // // import axios from 'axios';
 // // import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -46,21 +46,7 @@
 //       message: data.get('message'),
 //       phone: data.get('tel'),
 //     });
-//     // emailjs
-//     //   .sendForm(
-//     //     'service_sm8euqc',
-//     //     'template_ptw2yva',
-//     //     form.current,
-//     //     'user_75ark42trFqSYlJvDbd5v'
-//     //   )
-//     //   .then(
-//     //     (result) => {
-//     //       console.log(result.text);
-//     //     },
-//     //     (error) => {
-//     //       console.log(error.text);
-//     //     }
-//     //   );
+
 //   };
 
 //   return (
@@ -141,20 +127,24 @@
 // };
 // export default ContactContainer;
 
-import React from 'react';
+import React, { useRef } from 'react';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MessageIcon from '@mui/icons-material/Message';
+import SendIcon from '@mui/icons-material/Send';
 import { Button } from '@mui/material';
 import { Trans } from 'react-i18next';
 import swal from 'sweetalert';
 import { useForm } from 'react-hook-form';
+import emailjs from 'emailjs-com';
 import Title from './Title';
+import image from '../images/contact.jpg';
 
 export default function ContactContainer() {
+  const form = useRef();
   const contactTitle = <Trans i18nKey='contactTitle'></Trans>;
   const contactName = <Trans i18nKey='contactName'></Trans>;
   const contactEmail = <Trans i18nKey='contactEmail'></Trans>;
@@ -172,29 +162,44 @@ export default function ContactContainer() {
     if (data.password === data.confirmpassword) {
       swal(
         'Good job!',
-        'Your data has been successfully registered!',
+        'You have successfully sent a message. We will contact you soon.',
         'success'
       );
+      emailjs
+        .sendForm(
+          'service_sm8euqc',
+          'template_ptw2yva',
+          form.current,
+          'user_75ark42trFqSYlJvDbd5v'
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
     } else {
-      swal('Good job!', 'Please Check Your Password!', 'error');
+      swal('Oops..', 'Something went wrong', 'error');
     }
     console.log(data);
   };
 
   return (
     <div>
-      <div sx={{ minWidth: 275 }} className='container'>
+      <div sx={{ minWidth: 320 }} className='container'>
         <div className='wrapper'>
           <section className='columns'>
             <div className='column'>
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
                 <Title title={contactTitle} />
                 <TextField
-                  id='input-with-icon-textfield'
+                  id='name'
                   label={contactName}
                   type='text'
                   className='input'
-                  style={{ marginBottom: '3px' }}
+                  style={{ marginBottom: '20px' }}
                   {...register('name', {
                     required: 'Name is Required',
                   })}
@@ -225,7 +230,7 @@ export default function ContactContainer() {
                       message: 'Invalid Email Address',
                     },
                   })}
-                  style={{ marginBottom: '3px' }}
+                  style={{ marginBottom: '20px' }}
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position='start'>
@@ -237,12 +242,12 @@ export default function ContactContainer() {
                 />
 
                 <TextField
-                  id='input-with-icon-textfield'
+                  id='phone'
                   label={tel}
-                  type='text'
+                  type='tel'
                   className='input'
-                  style={{ marginBottom: '3px' }}
-                  {...register('contactNumber', {
+                  style={{ marginBottom: '20px' }}
+                  {...register('phone', {
                     required: 'Contact Number is Required',
                     pattern: {
                       value:
@@ -266,12 +271,13 @@ export default function ContactContainer() {
                   </span>
                 )}
                 <TextField
-                  id='input-with-icon-textfield'
+                  id='message'
                   label={contactMessage}
                   type='text'
                   multiline
+                  rows={2}
                   className='input'
-                  style={{ marginBottom: '3px' }}
+                  style={{ marginBottom: '20px' }}
                   {...register('message', {
                     required: 'Message is Required',
                   })}
@@ -293,7 +299,8 @@ export default function ContactContainer() {
 
                 <div className='form-button'>
                   <Button
-                    variant='contained'
+                    variant='outlined'
+                    endIcon={<SendIcon />}
                     className='form-submit'
                     type='submit'
                   >
@@ -302,7 +309,11 @@ export default function ContactContainer() {
                 </div>
               </form>
             </div>
-            <div className='column'></div>
+            <div className='column'>
+              <center>
+                <img src={image} alt='Contact Us' />
+              </center>
+            </div>
           </section>
         </div>
       </div>

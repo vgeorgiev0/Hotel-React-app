@@ -604,10 +604,10 @@ h6 {
 } */
 .contactForm {
   text-align: center;
-  max-width: 80vw;
-  height: 62vh;
+  max-width: 90vw;
+  height: 70vh;
   margin: 20px auto;
-  width: 50vw;
+  width: 60vw;
   display: grid;
   grid-template-columns: (auto-fit, minmax(202px, 1fr));
   grid-row-gap: 2rem;
@@ -637,21 +637,21 @@ textarea {
   }
 }
 .wrapper {
-  padding: 5px;
+  padding: 2px;
   max-width: 960px;
-  width: 95%;
-  margin: 20px auto;
+  width: 100%;
+  margin: 10% auto;
 }
 .columns {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: center;
-  margin: 5px 0;
+  margin: 10px 0;
   text-align: center;
 }
 .column {
   flex: 1;
-  margin: 2px;
+  margin: 20px;
   padding: 10px;
 }
 @media screen and (max-width: 980px) {
@@ -668,7 +668,7 @@ textarea {
 }
 .input {
   width: 90%;
-  padding: 10px 0px 5px 2px;
+  padding: 15px 0px 5px 2px;
 }
 .form-button {
   padding: 15px 0px 10px 0px;
