@@ -17,6 +17,7 @@
     "aos": "^2.3.4",
     "axios": "^0.24.0",
     "emailjs-com": "^3.2.0",
+    "google-map-react": "^2.1.10",
     "handlebars": "^4.7.7",
     "i18next": "^21.4.0",
     "i18next-browser-languagedetector": "^6.1.2",
