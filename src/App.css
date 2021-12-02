@@ -708,3 +708,19 @@ textarea {
 }
 
 /* End of Carousel */
+
+/* Captcha */
+.captcha {
+  margin-left: 40px;
+}
+@media screen and (max-width: 980px) {
+  .captcha {
+    margin-left: 35px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .captcha {
+    margin-left: 10px;
+  }
+}
+/* End of Captcha */

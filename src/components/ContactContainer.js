@@ -181,7 +181,7 @@ export default function ContactContainer() {
                   </span>
                 )}
                 <ReCAPTCHA
-                  style={{ marginLeft: '40px' }}
+                  className='captcha'
                   ref={reRef}
                   sitekey={captchaKey}
                   onChange={updateRecaptchaToken}
