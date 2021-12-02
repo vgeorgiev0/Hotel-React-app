@@ -36,7 +36,11 @@ export default function ContactContainer() {
   } = useForm();
 
   const onSubmit = (data) => {
-    if (data.password === data.confirmpassword) {
+    if (
+      data.name.length > 0 &&
+      data.phone.length > 0 &&
+      data.message.length > 0
+    ) {
       swal(
         'Thank you!',
         'You have successfully sent a message. We will contact you soon.',
@@ -60,7 +64,6 @@ export default function ContactContainer() {
     } else {
       swal('Oops..', 'Something went wrong', 'error');
     }
-    console.log(data);
     reset({ name: '', email: '', phone: '', message: '' });
   };
 
