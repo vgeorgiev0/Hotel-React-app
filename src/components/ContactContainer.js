@@ -1,133 +1,4 @@
-// import React, { useRef, useState } from 'react';
-// import Avatar from '@mui/material/Avatar';
-// import Button from '@mui/material/Button';
-// import CssBaseline from '@mui/material/CssBaseline';
-// import TextField from '@mui/material/TextField';
-// import Box from '@mui/material/Box';
-// import Container from '@mui/material/Container';
-
-// // import axios from 'axios';
-// // import ReCAPTCHA from 'react-google-recaptcha';
-
-// const ContactContainer = () => {
-//   const [email, setEmail] = useState('');
-//   const [phone, setPhone] = useState('');
-//   const [name, setName] = useState('');
-
-//   const [message, setMessage] = useState('');
-
-//   const [emailErr, setEmailErr] = useState(false);
-//   const [phoneErr, setPhoneErr] = useState(false);
-//   const form = useRef();
-
-//   const validEmail = new RegExp(
-//     '^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$'
-//   );
-//   const validPhoneNumber = new RegExp(
-//     '^[+]?[(]?[0-9]{3}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4,6}$'
-//   );
-
-//   const validate = () => {
-//     if (!validEmail.test(email)) {
-//       setEmailErr(true);
-//     }
-//     if (!validPhoneNumber.test(phone)) {
-//       setPhoneErr(true);
-//     }
-//   };
-
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
-//     const data = new FormData(event.currentTarget);
-//     // eslint-disable-next-line no-console
-//     console.log({
-//       name: data.get('name'),
-//       email: data.get('email'),
-//       message: data.get('message'),
-//       phone: data.get('tel'),
-//     });
-
-//   };
-
-//   return (
-//     <Container component='main' maxWidth='xs'>
-//       <CssBaseline />
-//       <Box
-//         sx={{
-//           marginTop: 8,
-//           display: 'flex',
-//           flexDirection: 'column',
-//           alignItems: 'center',
-//         }}
-//       >
-//         <Title title={contactTitle} />
-//         <Avatar sx={{ width: 80, height: 80, m: 0, bgcolor: 'secondary.main' }}>
-//           <ContactLogo />
-//         </Avatar>
-//         <Box
-//           component='form'
-//           ref={form}
-//           onSubmit={handleSubmit}
-//           noValidate
-//           sx={{ mt: 2 }}
-//         >
-//           <TextField
-//             margin='normal'
-//             required
-//             fullWidth
-//             name='name'
-//             label={contactName}
-//             type='name'
-//             id='name'
-//           />
-//           <TextField
-//             margin='normal'
-//             fullWidth
-//             id='email'
-//             label={contactEmail}
-//             name='email'
-//             autoComplete='email'
-//             error
-//             helperText='Please enter a valid Email'
-//             onChange={setEmail}
-//           />
-//           <TextField
-//             margin='normal'
-//             required
-//             fullWidth
-//             name='message'
-//             label={contactMessage}
-//             type='message'
-//             id='message'
-//             multiline
-//           />
-//           <TextField
-//             margin='normal'
-//             required
-//             fullWidth
-//             name='tel'
-//             label={tel}
-//             type='tel'
-//             id='tel'
-//             onChange={setPhone}
-//           />
-//           <Button
-//             className='btn-primary'
-//             type='submit'
-//             fullWidth
-//             variant='outlined'
-//             sx={{ mt: 5, mb: 5 }}
-//           >
-//             {submitBtn}
-//           </Button>
-//         </Box>
-//       </Box>
-//     </Container>
-//   );
-// };
-// export default ContactContainer;
-
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -138,13 +9,18 @@ import SendIcon from '@mui/icons-material/Send';
 import { Button } from '@mui/material';
 import { Trans } from 'react-i18next';
 import swal from 'sweetalert';
-import { useForm } from 'react-hook-form';
+import ReCAPTCHA from 'react-google-recaptcha';
 import emailjs from 'emailjs-com';
+import { useForm } from 'react-hook-form';
 import Title from './Title';
 import image from '../images/contact.jpg';
 
 export default function ContactContainer() {
+  const [enableButton, setEnableButton] = useState(true);
+  const [recaptchaToken, setReCaptchaToken] = useState();
   const form = useRef();
+  const reRef = useRef();
+  const captchaKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
   const contactTitle = <Trans i18nKey='contactTitle'></Trans>;
   const contactName = <Trans i18nKey='contactName'></Trans>;
   const contactEmail = <Trans i18nKey='contactEmail'></Trans>;
@@ -156,12 +32,13 @@ export default function ContactContainer() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const onSubmit = (data) => {
     if (data.password === data.confirmpassword) {
       swal(
-        'Good job!',
+        'Thank you!',
         'You have successfully sent a message. We will contact you soon.',
         'success'
       );
@@ -184,6 +61,13 @@ export default function ContactContainer() {
       swal('Oops..', 'Something went wrong', 'error');
     }
     console.log(data);
+    reset({ name: '', email: '', phone: '', message: '' });
+  };
+
+  const updateRecaptchaToken = (token) => {
+    setReCaptchaToken(token);
+    setEnableButton(false);
+    console.log(recaptchaToken);
   };
 
   return (
@@ -296,11 +180,17 @@ export default function ContactContainer() {
                     {errors.message.message}
                   </span>
                 )}
-
+                <ReCAPTCHA
+                  style={{ marginLeft: '40px' }}
+                  ref={reRef}
+                  sitekey={captchaKey}
+                  onChange={updateRecaptchaToken}
+                />
                 <div className='form-button'>
                   <Button
                     variant='outlined'
                     endIcon={<SendIcon />}
+                    disabled={enableButton}
                     className='form-submit'
                     type='submit'
                   >
