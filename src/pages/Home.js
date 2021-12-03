@@ -10,6 +10,7 @@ import Carousel from '../components/Carousel';
 import Intro from '../components/Intro';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import Testimonial from '../components/Testimonial';
 
 const Home = (props) => {
   useEffect(() => {
@@ -42,6 +43,7 @@ const Home = (props) => {
       >
         <Services />
       </div>
+
       <div
         data-aos='fade-zoom-in'
         data-aos-offset='200'
@@ -58,6 +60,15 @@ const Home = (props) => {
       >
         <Carousel />
       </div>
+      <div
+        data-aos='fade-zoom-in'
+        data-aos-offset='400'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='800'
+      >
+        <Testimonial />
+      </div>
+
       <div
         data-aos='fade-zoom-in'
         data-aos-offset='400'
