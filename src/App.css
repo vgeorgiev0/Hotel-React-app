@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ body {
   padding-top: 66px;
   color: var(--mainBlack);
   background: var(--mainWhite);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Libre Baskerville', serif;
   line-height: 1.4;
 }
 h1 {
@@ -724,7 +724,3 @@ textarea {
   }
 }
 /* End of Captcha */
-
-/* Quote */
-
-/* End of Quote */

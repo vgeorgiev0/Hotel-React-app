@@ -18,6 +18,7 @@ const Intro = (props) => {
           textTransform: 'none',
           fontSize: '20px',
           wordSpacing: '0.2em',
+          fontFamily: `'Libre Baskerville', serif`,
         }}
       >
         {props.introDesc}
