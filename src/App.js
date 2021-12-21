@@ -27,7 +27,7 @@ function App() {
   };
 
   return (
-    <>
+    <div>
       <Navbar />
       <br />
       <br />
@@ -61,7 +61,7 @@ function App() {
         <Route component={Error} />
       </Switch>
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -112,9 +112,8 @@ function App() {
                   objectFit: 'cover',
                   border: '4px solid hsl(210,31%,80%)',
                   boxShadow: '0 5px 15px rgba(0,0,0,0.2)',
-                  display: 'table-cell',
-                  verticalAlign: 'middle',
-                  textAlign: 'center',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
                 }}
               />
               <h4
