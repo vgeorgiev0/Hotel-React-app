@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { FaQuoteRight } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 import data from '../sliderData';
-function App() {
+import { useTranslation } from 'react-i18next';
+function Testimonial() {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = React.useState(0);
+
+  const { t } = useTranslation();
 
   const nextSlide = () => {
     setIndex((oldIndex) => {
@@ -72,7 +76,7 @@ function App() {
         }}
       >
         {people.map((person, personIndex) => {
-          const { id, image, name, title, quote } = person;
+          const { id, image, name, quote } = person;
 
           let position = 'translateX(100%)';
           let opacity = 0;
@@ -103,7 +107,7 @@ function App() {
             >
               <img
                 src={image}
-                alt={name}
+                alt={t(name)}
                 style={{
                   borderRadius: '50%',
                   marginBottom: '1rem',
@@ -123,17 +127,9 @@ function App() {
                   marginBottom: '0.25rem',
                 }}
               >
-                {name}
+                {t(name)}
               </h4>
-              <p
-                style={{
-                  textTransform: 'capitalize',
-                  marginBottom: '0.75rem',
-                  color: 'hsl(209, 34%, 30%);',
-                }}
-              >
-                {title}
-              </p>
+
               <p
                 style={{
                   maxWidth: '35em',
@@ -143,7 +139,7 @@ function App() {
                   color: 'hsl(210, 22%, 49%)',
                 }}
               >
-                {quote}
+                {t(quote)}
               </p>
               <FaQuoteRight
                 style={{
@@ -204,4 +200,12 @@ function App() {
   );
 }
 
-export default App;
+export default Testimonial;
+
+Testimonial.propTypes = {
+  testimonial: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    quote: PropTypes.string.isRequired,
+  }),
+};
