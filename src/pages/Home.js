@@ -11,6 +11,7 @@ import Intro from '../components/Intro';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Testimonial from '../components/Testimonial';
+import VideoPlayer from '../components/VideoPlayer';
 
 const Home = (props) => {
   useEffect(() => {
@@ -52,6 +53,16 @@ const Home = (props) => {
       >
         <Intro intro={intro} introDesc={introDesc} />
       </div>
+
+      <div
+        data-aos='fade-zoom-in'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
+        <VideoPlayer />
+      </div>
+
       <div
         data-aos='fade-zoom-in'
         data-aos-offset='200'
