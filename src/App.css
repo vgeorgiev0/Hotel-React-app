@@ -9,11 +9,11 @@
 }
 :root {
   --primaryColor: #e3b74f;
-  --mainWhite: #e5dcc8;
-  --offWhite: #ffeedb;
+  --mainWhite: #e9ecef;
+  --offWhite: #e9ecef;
   --mainBlack: #4b4237;
   --mainGrey: #d9d4d3;
-  --darkGrey: #c7c3bc;
+  --darkGrey: #ced4da;
   --mainTransition: all 0.15s linear;
   --mainSpacing: 3px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
