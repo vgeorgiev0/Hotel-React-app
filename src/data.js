@@ -14,12 +14,12 @@ import tina5 from './images/tina/5.JPG';
 import tina6 from './images/tina/6.JPG';
 import tina7 from './images/tina/7.JPG';
 
-import roomEli1 from './images/eli/room/1.jpg';
-import roomEli2 from './images/eli/room/2.jpg';
-import roomEli3 from './images/eli/room/3.jpg';
-import roomEli4 from './images/eli/room/4.jpg';
-import roomEli5 from './images/eli/room/5.jpg';
-import roomEli6 from './images/eli/room/6.jpg';
+// import roomEli1 from './images/eli/room/1.jpg';
+// import roomEli2 from './images/eli/room/2.jpg';
+// import roomEli3 from './images/eli/room/3.jpg';
+// import roomEli4 from './images/eli/room/4.jpg';
+// import roomEli5 from './images/eli/room/5.jpg';
+// import roomEli6 from './images/eli/room/6.jpg';
 
 import apartmentEli1 from './images/eli/apartment/1.jpg';
 import apartmentEli2 from './images/eli/apartment/2.jpg';
@@ -47,7 +47,7 @@ const data = [
     fields: {
       name: 'dekiTitle',
       slug: 'apartment-deki',
-      type: 'double',
+      double: true,
       price: 38,
       size: 54,
       capacity: 4,
@@ -180,72 +180,72 @@ const data = [
       ],
     },
   },
-  {
-    sys: {
-      id: '3',
-    },
-    fields: {
-      name: 'eliTitle',
-      slug: 'double-room-eli',
-      price: 20,
-      size: 16,
-      capacity: 2,
-      description: 'eliDetails',
-      extras: [
-        'eliExtra1',
-        'eliExtra2',
-        'eliExtra3',
-        'eliExtra4',
-        'eliExtra5',
-        'eliExtra6',
-        'eliExtra7',
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: roomEli1,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: roomEli2,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: roomEli3,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: roomEli4,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: roomEli5,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: roomEli6,
-            },
-          },
-        },
-      ],
-    },
-  },
+  // {
+  //   sys: {
+  //     id: '3',
+  //   },
+  //   fields: {
+  //     name: 'eliTitle',
+  //     slug: 'double-room-eli',
+  //     price: 20,
+  //     size: 16,
+  //     capacity: 2,
+  //     description: 'eliDetails',
+  //     extras: [
+  //       'eliExtra1',
+  //       'eliExtra2',
+  //       'eliExtra3',
+  //       'eliExtra4',
+  //       'eliExtra5',
+  //       'eliExtra6',
+  //       'eliExtra7',
+  //     ],
+  //     images: [
+  //       {
+  //         fields: {
+  //           file: {
+  //             url: roomEli1,
+  //           },
+  //         },
+  //       },
+  //       {
+  //         fields: {
+  //           file: {
+  //             url: roomEli2,
+  //           },
+  //         },
+  //       },
+  //       {
+  //         fields: {
+  //           file: {
+  //             url: roomEli3,
+  //           },
+  //         },
+  //       },
+  //       {
+  //         fields: {
+  //           file: {
+  //             url: roomEli4,
+  //           },
+  //         },
+  //       },
+  //       {
+  //         fields: {
+  //           file: {
+  //             url: roomEli5,
+  //           },
+  //         },
+  //       },
+  //       {
+  //         fields: {
+  //           file: {
+  //             url: roomEli6,
+  //           },
+  //         },
+  //       },
+  //     ],
+  //   },
+  // },
   {
     sys: {
       id: '4',
@@ -253,6 +253,7 @@ const data = [
     fields: {
       name: 'apartmentEliTitle',
       slug: 'apartment-eli',
+      double: true,
       price: 30,
       size: 36,
       capacity: 2,

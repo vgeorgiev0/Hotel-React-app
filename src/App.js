@@ -14,8 +14,6 @@ import { Switch, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 
 import bgFlag from './images/flag/bgFlag.png';
-import deFlag from './images/flag/deFlag.png';
-import itFlag from './images/flag/itFlag.png';
 import rsFlag from './images/flag/rsFlag.png';
 import usFlag from './images/flag/usFlag.png';
 
@@ -43,14 +41,6 @@ function App() {
         <button onClick={() => changeLanguage('bg')}>
           <img src={bgFlag} alt='flagBG' />
           bg
-        </button>
-        <button onClick={() => changeLanguage('it')}>
-          <img src={itFlag} alt='flagIT' />
-          it
-        </button>
-        <button onClick={() => changeLanguage('de')}>
-          <img src={deFlag} alt='flagDE' />
-          de
         </button>
       </div>
       <Switch>
