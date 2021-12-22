@@ -4,9 +4,12 @@ import { FaQuoteRight } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import data from '../sliderData';
 import { useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 function Testimonial() {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = React.useState(0);
+
+  const reviews = <Trans i18nKey='reviews'></Trans>;
 
   const { t } = useTranslation();
 
@@ -59,7 +62,7 @@ function Testimonial() {
           <span style={{ fontSize: '0.85em', color: 'hsl(21,62%,45%)' }}>
             /
           </span>
-          Reviews
+          {reviews}
         </h2>
       </div>
       <div

@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 import Title from './Title';
+import { Trans } from 'react-i18next';
 
 const VideoPlayer = () => {
+  const ourVideo = <Trans i18nKey='ourVideo'></Trans>;
+
   return (
     <div>
-      <Title title={'Our Promotional Video'}></Title>
+      <Title title={ourVideo}></Title>
       <ReactPlayer
         width='100vw'
         height='60vh'
