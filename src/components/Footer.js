@@ -16,7 +16,8 @@ const Footer = () => {
     },
     {
       title: <Trans i18nKey='email'></Trans>,
-      description: 'slobodan.zivadinovic@gmail.com',
+      description: `slobodan.zivadinovic
+      @gmail.com`,
       info: 'mailto:slobodan.zivadinovic@gmail.com',
     },
   ];
