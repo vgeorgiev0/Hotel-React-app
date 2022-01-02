@@ -32,7 +32,22 @@ class SingleRoom extends Component {
         </div>
       );
     }
-    const { name, description, capacity, size, price, extras, images } = room;
+    const {
+      name,
+      description,
+      capacity,
+      size,
+      price,
+      extras,
+      images,
+      double,
+      firstRoom,
+      secondRoom,
+      doubleDetails,
+    } = room;
+
+    console.log(firstRoom);
+    console.log(secondRoom);
 
     const [mainImg, ...defaultImg] = images;
 
@@ -59,13 +74,13 @@ class SingleRoom extends Component {
               <p>{t(description)}</p>
             </article>
             <article className='info'>
-              <h3>{t('apartmentInfo')}</h3>
+              {!double && <h3>{t('apartmentInfo')}</h3>}
+              {double && <h3>{t('doubleApartmentInfo')}</h3>}
               <h6>
                 {t('perNight')} : € {price}
               </h6>
               <h6>
-                {t('roomSize')} : {size}
-                {t('sqr')}
+                {t('roomSize')} : {size} {t('sqr')}
               </h6>
               <h6>
                 {t('roomCapacity')} :
@@ -84,6 +99,14 @@ class SingleRoom extends Component {
             })}
           </ul>
         </section>
+        {double && (
+          <section className='room-extras'>
+            <h6 className='loading'>Book only one of the rooms</h6>
+            <ul className='extras'>
+              <li>{doubleDetails}</li>
+            </ul>
+          </section>
+        )}
       </div>
     );
   }

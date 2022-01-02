@@ -48,6 +48,25 @@ const data = [
       name: 'dekiTitle',
       slug: 'apartment-deki',
       double: true,
+      doubleDetails: 'doubleDetails',
+      firstRoom: [
+        {
+          fields: {
+            name: 'firstRoomDeki',
+            price: 20,
+            capacity: 2,
+          },
+        },
+      ],
+      secondRoom: [
+        {
+          fields: {
+            name: 'secondRoomDeki',
+            price: 20,
+            capacity: 2,
+          },
+        },
+      ],
       price: 38,
       size: 54,
       capacity: 4,
@@ -254,6 +273,25 @@ const data = [
       name: 'apartmentEliTitle',
       slug: 'apartment-eli',
       double: true,
+      doubleDetails: 'doubleDetails',
+      firstRoom: [
+        {
+          fields: {
+            name: 'firstRoomEli',
+            price: 20,
+            capacity: 2,
+          },
+        },
+      ],
+      secondRoom: [
+        {
+          fields: {
+            name: 'secondRoomEli',
+            price: 20,
+            capacity: 2,
+          },
+        },
+      ],
       price: 30,
       size: 36,
       capacity: 2,
