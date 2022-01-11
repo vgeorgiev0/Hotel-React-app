@@ -1,12 +1,7 @@
 import React, { Suspense } from 'react';
 import './App.css';
 import { useTranslation } from 'react-i18next';
-
-// import Home from './pages/Home';
-// import Restaurant from './pages/Restaurant';
-// import Rooms from './pages/Rooms';
-// import SingleRoom from './pages/SingleRoom';
-// import Contact from './pages/Contact';
+import v1rt from './images/V1rtuoso.gif';
 
 import Loading from './components/Loading';
 
@@ -68,6 +63,38 @@ function App() {
         </Switch>
       </Suspense>
       <Footer />
+      <div>
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
+          href='https://v1rtuoso.eu/'
+        >
+          <p
+            style={{
+              position: 'revert',
+              textShadow: '2px 2px #1976d2',
+              textAlign: 'center',
+              bottom: '0px',
+              fontSize: '10px',
+              left: '50%',
+              color: 'white',
+              backgroundColor: 'black',
+            }}
+          >
+            Made by V1rtuoso
+          </p>
+          <img
+            style={{
+              position: 'relative',
+              width: '100%',
+              height: '1vh',
+              bottom: '0px',
+            }}
+            src={v1rt}
+            alt='v1rtuoso'
+          />
+        </a>
+      </div>
     </div>
   );
 }

@@ -19,7 +19,7 @@ const Home = (props) => {
   }, []);
 
   const mainTitle = (
-    <Trans i18nKey='mainTitle'>'Welcome to Rural household Morava ŽIS</Trans>
+    <Trans i18nKey='mainTitle'>Welcome to Rural household Morava ŽIS</Trans>
   );
   const mainSubtitle = (
     <Trans i18nKey='mainSubtitle'>Wonderful place to enjoy.</Trans>
