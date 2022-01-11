@@ -61,6 +61,8 @@ export default function FullWidthTabs() {
   const introEntertainmentDesc = (
     <Trans i18nKey='introEntertainmentDesc'></Trans>
   );
+  const accommodationButton = <Trans i18nKey='apartmentsTitle'></Trans>;
+  const restaurantButton = <Trans i18nKey='restaurantButton'></Trans>;
 
   const handleChange = (event, newValue) => {
     event.preventDefault();
@@ -129,7 +131,7 @@ export default function FullWidthTabs() {
           <br />
 
           <button className='btn-primary'>
-            <Link to='/apartments'>See more</Link>
+            <Link to='/apartments'>{accommodationButton}</Link>
           </button>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
@@ -137,7 +139,7 @@ export default function FullWidthTabs() {
           <br />
           <br />
           <button className='btn-primary'>
-            <Link to='/restaurant'>See more</Link>
+            <Link to='/restaurant'>{restaurantButton}</Link>
           </button>
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
