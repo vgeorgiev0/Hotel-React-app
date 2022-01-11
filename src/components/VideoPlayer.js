@@ -10,7 +10,7 @@ const VideoPlayer = () => {
     <div>
       <Title title={ourVideo}></Title>
       <ReactPlayer
-        width='100vw'
+        width='97vw'
         height='60vh'
         className='video'
         url='https://www.youtube.com/watch?v=z4mfHMVTaKw'

@@ -49,7 +49,14 @@ function Testimonial() {
   }, [index, people.length]);
 
   return (
-    <section style={{ width: '90vw', margin: '5rem auto', maxWidth: '1170px' }}>
+    <section
+      style={{
+        width: '90vw',
+        margin: '5rem auto',
+        maxWidth: '1170px',
+        marginTop: '15vh',
+      }}
+    >
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <h2
           style={{
