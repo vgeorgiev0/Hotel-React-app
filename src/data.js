@@ -7,7 +7,7 @@ import deki5 from './images/deki/5.jpg';
 import deki6 from './images/deki/6.JPG';
 import deki7 from './images/deki/7.jpg';
 
-import tinamain from './images/tina/main.JPG';
+import tinaMain from './images/tina/tinaMain.jpg';
 import tina1 from './images/tina/1.JPG';
 import tina2 from './images/tina/2.JPG';
 import tina3 from './images/tina/3.JPG';
@@ -141,7 +141,7 @@ const data = [
     fields: {
       name: 'tinaTitle',
       slug: 'apartment-tina',
-      price: 40,
+      price: 45,
       size: 54,
       capacity: 4,
       featured: true,
@@ -153,13 +153,12 @@ const data = [
         'tinaExtra4',
         'tinaExtra5',
         'tinaExtra6',
-        'tinaExtra7',
       ],
       images: [
         {
           fields: {
             file: {
-              url: tinamain,
+              url: tinaMain,
             },
           },
         },
@@ -308,7 +307,7 @@ const data = [
           },
         },
       ],
-      price: 30,
+      price: 40,
       size: 36,
       capacity: 2,
       featured: true,
@@ -375,7 +374,7 @@ const data = [
     fields: {
       name: 'flatTitle',
       slug: 'flat',
-      price: 45,
+      price: 60,
       size: 85,
       capacity: 6,
       description: 'flatDetails',
