@@ -713,12 +713,24 @@ textarea {
 .captcha {
   margin-left: 40px;
 }
+
+.introTabs {
+  padding-left: 35%;
+}
 @media screen and (max-width: 980px) {
+  .introTabs {
+    padding-left: 15%;
+  }
+
   .captcha {
     margin-left: 35px;
   }
 }
 @media screen and (max-width: 680px) {
+  .introTabs {
+    padding-left: 2%;
+  }
+
   .captcha {
     margin-left: 10px;
   }

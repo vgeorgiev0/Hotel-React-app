@@ -84,6 +84,7 @@ export default function FullWidthTabs() {
     >
       <AppBar position='static'>
         <Tabs
+          className='introTabs'
           style={{
             backgroundColor: '#CED4DA',
           }}
