@@ -293,7 +293,7 @@ const data = [
         {
           fields: {
             name: 'firstRoomEli',
-            price: 20,
+            price: 25,
             capacity: 2,
           },
         },
