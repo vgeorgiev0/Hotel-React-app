@@ -5,7 +5,7 @@ const Loading = () => {
   return (
     <div className='loading'>
       <h4>Loading...</h4>
-      <img style={{ marginLeft: '40%' }} src={loadingGif} alt='' />
+      <img className='loadingSpinner' src={loadingGif} alt='' />
     </div>
   );
 };

@@ -78,6 +78,10 @@ h6 {
   text-align: center;
   margin-top: 3rem;
 }
+.loadingSpinner {
+  margin-left: 45%;
+}
+
 .error {
   text-align: center;
   text-transform: uppercase;
@@ -718,6 +722,9 @@ textarea {
   padding-left: 35%;
 }
 @media screen and (max-width: 980px) {
+  .loadingSpinner {
+    margin-left: 40%;
+  }
   .introTabs {
     padding-left: 15%;
   }
@@ -727,6 +734,9 @@ textarea {
   }
 }
 @media screen and (max-width: 680px) {
+  .loadingSpinner {
+    margin-left: 25%;
+  }
   .introTabs {
     padding-left: 2%;
   }
