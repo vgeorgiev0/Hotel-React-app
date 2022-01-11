@@ -167,7 +167,7 @@ h6 {
 /* Hero */
 .defaultHero,
 .roomsHero {
-  min-height: calc(100vh - 66px);
+  min-height: calc(100vh - 180px);
   background: url('./images/main.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -177,7 +177,7 @@ h6 {
   background-image: url('./images/DSCN8304.JPG');
   max-width: 100%;
   height: auto;
-  min-height: 88vh;
+  min-height: calc(100vh - 180px);
 }
 /* End of Hero */
 /* Banner */
