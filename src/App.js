@@ -8,6 +8,8 @@ import { useTranslation } from 'react-i18next';
 // import SingleRoom from './pages/SingleRoom';
 // import Contact from './pages/Contact';
 
+import Loading from './components/Loading';
+
 import Error from './pages/Error';
 
 import ScrollToTop from './ScrollToTop';
@@ -53,7 +55,7 @@ function App() {
           bg
         </button>
       </div>
-      <Suspense>
+      <Suspense fallback={<Loading />}>
         <Switch>
           <ScrollToTop>
             <Route exact path='/' component={Home} />
