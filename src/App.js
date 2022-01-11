@@ -3,10 +3,14 @@ import './App.css';
 import { useTranslation } from 'react-i18next';
 
 import Home from './pages/Home';
+import Restaurant from './pages/Restaurant';
 import Rooms from './pages/Rooms';
 import SingleRoom from './pages/SingleRoom';
-import About from './pages/About';
+import Contact from './pages/Contact';
+
 import Error from './pages/Error';
+
+import ScrollToTop from './ScrollToTop';
 
 import Navbar from './components/Navbar';
 
@@ -44,10 +48,13 @@ function App() {
         </button>
       </div>
       <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/apartments/' component={Rooms} />
-        <Route exact path='/apartments/:slug' component={SingleRoom} />
-        <Route exact path='/about' component={About} />
+        <ScrollToTop>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/restaurant' component={Restaurant} />
+          <Route exact path='/apartments/' component={Rooms} />
+          <Route exact path='/apartments/:slug' component={SingleRoom} />
+          <Route exact path='/contact' component={Contact} />
+        </ScrollToTop>
         <Route component={Error} />
       </Switch>
       <Footer />

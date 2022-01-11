@@ -17,7 +17,8 @@ const Navbar = () => {
 
   const home = <Trans i18nKey='home'></Trans>;
   const apartments = <Trans i18nKey='apartments'></Trans>;
-  const about = <Trans i18nKey='about'></Trans>;
+  const contact = <Trans i18nKey='about'></Trans>;
+  const restaurant = <Trans i18nKey='introRestaurant'></Trans>;
 
   return (
     <nav className='navbar'>
@@ -37,13 +38,18 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
+            <Link onClick={handleToggle} to='/restaurant'>
+              {restaurant}
+            </Link>
+          </li>
+          <li>
             <Link onClick={handleToggle} to='/apartments'>
               {apartments}
             </Link>
           </li>
           <li>
-            <Link onClick={handleToggle} to='/about'>
-              {about}
+            <Link onClick={handleToggle} to='/contact'>
+              {contact}
             </Link>
           </li>
         </ul>

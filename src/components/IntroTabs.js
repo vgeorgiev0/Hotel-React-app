@@ -7,6 +7,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { Link } from 'react-router-dom';
 import { MdRoomService, MdOutlineFamilyRestroom } from 'react-icons/md';
 import { FaSwimmingPool } from 'react-icons/fa';
 import { GiFamilyHouse } from 'react-icons/gi';
@@ -126,13 +127,17 @@ export default function FullWidthTabs() {
           <br />
           <br />
 
-          <button className='btn-primary'>See more</button>
+          <button className='btn-primary'>
+            <Link to='/apartments'>See more</Link>
+          </button>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           {introRestaurantDesc}
           <br />
           <br />
-          <button className='btn-primary'>See more</button>
+          <button className='btn-primary'>
+            <Link to='/restaurant'>See more</Link>
+          </button>
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
           {introEntertainmentDesc}

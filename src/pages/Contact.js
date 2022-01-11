@@ -1,7 +1,7 @@
 import React from 'react';
 import ContactContainer from '../components/ContactContainer';
 
-const About = () => {
+const Contact = () => {
   return (
     <div>
       <ContactContainer />
@@ -9,4 +9,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contact;
