@@ -17,8 +17,6 @@ import c14 from '../images/carousel/c14.jpeg';
 import c15 from '../images/carousel/c15.jpeg';
 import c16 from '../images/carousel/c16.jpg';
 
-// TODO Change image c10 with wider image
-
 export default class Carousel extends Component {
   render() {
     const settings = {

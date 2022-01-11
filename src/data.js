@@ -1,9 +1,11 @@
+import dekiMain from './images/deki/dekiMain.jpg';
 import deki1 from './images/deki/1.JPG';
 import deki2 from './images/deki/2.JPG';
 import deki3 from './images/deki/3.JPG';
 import deki4 from './images/deki/4.JPG';
-import deki5 from './images/deki/5.JPG';
+import deki5 from './images/deki/5.jpg';
 import deki6 from './images/deki/6.JPG';
+import deki7 from './images/deki/7.jpg';
 
 import tinamain from './images/tina/main.JPG';
 import tina1 from './images/tina/1.JPG';
@@ -67,12 +69,19 @@ const data = [
           },
         },
       ],
-      price: 38,
+      price: 45,
       size: 54,
       capacity: 4,
       description: 'dekiDetails',
-      extras: ['dekiExtra1', 'dekiExtra2', 'dekiExtra3'],
+      extras: ['dekiExtra1', 'dekiExtra2', 'dekiExtra3', 'dekiExtra4'],
       images: [
+        {
+          fields: {
+            file: {
+              url: dekiMain,
+            },
+          },
+        },
         {
           fields: {
             file: {
@@ -112,6 +121,13 @@ const data = [
           fields: {
             file: {
               url: deki6,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: deki7,
             },
           },
         },
