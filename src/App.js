@@ -1,17 +1,17 @@
-import React, { Suspense } from 'react';
+import React, { useEffect } from 'react';
+import {
+  Route,
+  BrowserRouter as Router,
+  useLocation,
+  withRouter,
+} from 'react-router-dom';
 import './App.css';
 import { useTranslation } from 'react-i18next';
+
 import v1rt from './images/V1rtuoso.gif';
-
-import Loading from './components/Loading';
-
-import Error from './pages/Error';
-
-import ScrollToTop from './ScrollToTop';
 
 import Navbar from './components/Navbar';
 
-import { Switch, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 
 import bgFlag from './images/flag/bgFlag.png';
@@ -23,6 +23,19 @@ const Rooms = React.lazy(() => import('./pages/Rooms'));
 const Home = React.lazy(() => import('./pages/Home'));
 const SingleRoom = React.lazy(() => import('./pages/SingleRoom'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+const Error = React.lazy(() => import('./pages/Error'));
+
+const _ScrollToTop = (props) => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return props.children;
+};
+
+const ScrollToTop = withRouter(_ScrollToTop);
 
 function App() {
   const { i18n } = useTranslation();
@@ -33,35 +46,33 @@ function App() {
 
   return (
     <div>
-      <Navbar />
-      <br />
-      <br />
-      <div className='language-btn'>
-        <button onClick={() => changeLanguage('rs')}>
-          <img src={rsFlag} alt='flagRS' />
-          rs
-        </button>
-        <button onClick={() => changeLanguage('en')}>
-          <img src={usFlag} alt='flagUS' />
-          en
-        </button>
-        <button onClick={() => changeLanguage('bg')}>
-          <img src={bgFlag} alt='flagBG' />
-          bg
-        </button>
-      </div>
-      <Suspense fallback={<Loading />}>
-        <Switch>
-          <ScrollToTop>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/restaurant' component={Restaurant} />
-            <Route exact path='/apartments/' component={Rooms} />
-            <Route exact path='/apartments/:slug' component={SingleRoom} />
-            <Route exact path='/contact' component={Contact} />
-          </ScrollToTop>
+      <Router>
+        <Navbar />
+        <br />
+        <br />
+        <div className='language-btn'>
+          <button onClick={() => changeLanguage('rs')}>
+            <img src={rsFlag} alt='flagRS' />
+            rs
+          </button>
+          <button onClick={() => changeLanguage('en')}>
+            <img src={usFlag} alt='flagUS' />
+            en
+          </button>
+          <button onClick={() => changeLanguage('bg')}>
+            <img src={bgFlag} alt='flagBG' />
+            bg
+          </button>
+        </div>
+        <ScrollToTop>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/restaurant' component={Restaurant} />
+          <Route exact path='/apartments/' component={Rooms} />
+          <Route exact path='/apartments/:slug' component={SingleRoom} />
+          <Route exact path='/contact' component={Contact} />
           <Route component={Error} />
-        </Switch>
-      </Suspense>
+        </ScrollToTop>
+      </Router>
       <Footer />
       <div>
         <a
