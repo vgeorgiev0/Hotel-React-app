@@ -23,7 +23,7 @@ const Rooms = React.lazy(() => import('./pages/Rooms'));
 const Home = React.lazy(() => import('./pages/Home'));
 const SingleRoom = React.lazy(() => import('./pages/SingleRoom'));
 const Contact = React.lazy(() => import('./pages/Contact'));
-const Error = React.lazy(() => import('./pages/Error'));
+// const Error = React.lazy(() => import('./pages/Error'));
 
 const _ScrollToTop = (props) => {
   const { pathname } = useLocation();
@@ -70,7 +70,6 @@ function App() {
           <Route exact path='/apartments/' component={Rooms} />
           <Route exact path='/apartments/:slug' component={SingleRoom} />
           <Route exact path='/contact' component={Contact} />
-          <Route component={Error} />
         </ScrollToTop>
       </Router>
       <Footer />
