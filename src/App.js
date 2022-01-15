@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import {
   Route,
   BrowserRouter as Router,
+  Switch,
   useLocation,
   withRouter,
 } from 'react-router-dom';
@@ -23,7 +24,7 @@ const Rooms = React.lazy(() => import('./pages/Rooms'));
 const Home = React.lazy(() => import('./pages/Home'));
 const SingleRoom = React.lazy(() => import('./pages/SingleRoom'));
 const Contact = React.lazy(() => import('./pages/Contact'));
-// const Error = React.lazy(() => import('./pages/Error'));
+const Error = React.lazy(() => import('./pages/Error'));
 
 const _ScrollToTop = (props) => {
   const { pathname } = useLocation();
@@ -65,11 +66,14 @@ function App() {
           </button>
         </div>
         <ScrollToTop>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/restaurant' component={Restaurant} />
-          <Route exact path='/apartments/' component={Rooms} />
-          <Route exact path='/apartments/:slug' component={SingleRoom} />
-          <Route exact path='/contact' component={Contact} />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/restaurant' component={Restaurant} />
+            <Route exact path='/apartments/' component={Rooms} />
+            <Route exact path='/apartments/:slug' component={SingleRoom} />
+            <Route exact path='/contact' component={Contact} />
+            <Route path='*' component={Error} />
+          </Switch>
         </ScrollToTop>
       </Router>
       <Footer />
