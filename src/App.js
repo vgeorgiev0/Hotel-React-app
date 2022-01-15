@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import {
   Route,
   BrowserRouter as Router,
+  Switch,
   useLocation,
   withRouter,
 } from 'react-router-dom';
@@ -65,12 +66,14 @@ function App() {
           </button>
         </div>
         <ScrollToTop>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/restaurant' component={Restaurant} />
-          <Route exact path='/apartments/' component={Rooms} />
-          <Route exact path='/apartments/:slug' component={SingleRoom} />
-          <Route exact path='/contact' component={Contact} />
-          <Route component={Error} />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/restaurant' component={Restaurant} />
+            <Route exact path='/apartments/' component={Rooms} />
+            <Route exact path='/apartments/:slug' component={SingleRoom} />
+            <Route exact path='/contact' component={Contact} />
+            <Route path='*' component={Error} />
+          </Switch>
         </ScrollToTop>
       </Router>
       <Footer />
