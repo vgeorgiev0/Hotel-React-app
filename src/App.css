@@ -166,7 +166,8 @@ h6 {
 /* end of navbar */
 /* Hero */
 .defaultHero,
-.roomsHero {
+.roomsHero,
+.restaurantHero {
   min-height: calc(100vh - 180px);
   background: url('./images/main.jpg') center/cover no-repeat;
   display: flex;
@@ -174,6 +175,12 @@ h6 {
   justify-content: center;
 }
 .roomsHero {
+  background-image: url('./images/DSCN8304.JPG');
+  max-width: 100%;
+  height: auto;
+  min-height: calc(100vh - 180px);
+}
+.restaurantHero {
   background-image: url('./images/DSCN8304.JPG');
   max-width: 100%;
   height: auto;
@@ -813,6 +820,7 @@ textarea {
   .para {
     width: 150px;
     height: 280px;
+    padding-bottom: 50%;
   }
 }
 
@@ -820,7 +828,7 @@ textarea {
   .para {
     width: 150px;
     height: 270px;
-    padding: 50px;
+    padding: 10%;
   }
 }
 /* End of Restaurant Page */
