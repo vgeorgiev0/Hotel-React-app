@@ -15,15 +15,18 @@ const Restaurant = () => {
   );
   return (
     <div>
-      <Parallax bgImage={mainImage} strength={100}>
-        <Banner title={mainTitle} subtitle={mainSubtitle}>
-          <Link to='/contact' className='btn-primary'>
-            <Trans i18nKey='about'>Contact Us</Trans>
-          </Link>
-        </Banner>
+      <Parallax bgImage={mainImage} strength={500}>
+        <div className='para'>
+          <Banner title={mainTitle} subtitle={mainSubtitle}>
+            <Link to='/contact' className='btn-primary'>
+              <Trans i18nKey='about'>Contact Us</Trans>
+            </Link>
+          </Banner>
+        </div>
       </Parallax>
+      <div></div>
       <div>
-        <Hero></Hero>
+        <Hero hero='restaurantHero'></Hero>
       </div>
     </div>
   );
