@@ -15,6 +15,10 @@ const Navbar = () => {
     }
   };
 
+  const Scroll = () => {
+    window.scrollTo(0, 0);
+  };
+
   const home = <Trans i18nKey='home'></Trans>;
   const apartments = <Trans i18nKey='apartments'></Trans>;
   const contact = <Trans i18nKey='about'></Trans>;
@@ -24,7 +28,7 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className='nav-center'>
         <div className='nav-header'>
-          <Link className='nav-logo' to='/'>
+          <Link className='nav-logo' to='/' onClick={Scroll}>
             <img width='30%' src={logo} alt='ZIS' />
           </Link>
           <button type='button' className='nav-btn' onClick={handleToggle}>

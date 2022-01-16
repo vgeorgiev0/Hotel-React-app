@@ -5,6 +5,7 @@ import { Parallax } from 'react-parallax';
 import { Link } from 'react-router-dom';
 import { Trans } from 'react-i18next';
 import mainImage from '../images/contact.jpg';
+import ImageGallery from '../components/ImageGallery';
 
 const Restaurant = () => {
   const mainTitle = (
@@ -15,7 +16,7 @@ const Restaurant = () => {
   );
   return (
     <div>
-      <Parallax bgImage={mainImage} strength={500}>
+      <Parallax bgImage={mainImage} strength={450}>
         <div className='para'>
           <Banner title={mainTitle} subtitle={mainSubtitle}>
             <Link to='/contact' className='btn-primary'>
@@ -24,7 +25,9 @@ const Restaurant = () => {
           </Banner>
         </div>
       </Parallax>
-      <div></div>
+      <div>
+        <ImageGallery />
+      </div>
       <div>
         <Hero hero='restaurantHero'></Hero>
       </div>

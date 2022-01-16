@@ -20,6 +20,11 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 /* globals */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding-top: 66px;
   color: var(--mainBlack);
@@ -97,7 +102,7 @@ h6 {
 /* end of globals */
 /* Navbar */
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -819,7 +824,7 @@ textarea {
 @media screen and (max-width: 980px) {
   .para {
     width: 150px;
-    height: 280px;
+    height: 260px;
     padding-bottom: 50%;
   }
 }
@@ -827,7 +832,7 @@ textarea {
 @media screen and (max-width: 680px) {
   .para {
     width: 150px;
-    height: 270px;
+    height: 240px;
     padding: 10%;
   }
 }
