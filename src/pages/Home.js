@@ -28,7 +28,7 @@ const Home = (props) => {
   const introDesc = <Trans i18nKey='introDesc'></Trans>;
 
   return (
-    <div className='grids'>
+    <div className='grids' id='home'>
       <Hero>
         <Banner title={mainTitle} subtitle={mainSubtitle}>
           <Link to='/apartments' className='btn-primary'>
