@@ -42,13 +42,7 @@ const Restaurant = () => {
       </div>
       <div className='columnLayout'>
         <div className='sectionContainer'>
-          <div
-            className='imageColumn'
-            data-aos='fade-right'
-            data-aos-offset='120'
-            data-aos-easing='ease-in-sine'
-            data-aos-duration='600'
-          >
+          <div className='imageColumn'>
             <img src={img1} alt='Restaurant ZIS' />
           </div>
 
@@ -87,24 +81,12 @@ const Restaurant = () => {
               </div>
             </div>
           </div>
-          <div
-            className='imageColumn'
-            data-aos='fade-left'
-            data-aos-offset='120'
-            data-aos-easing='ease-in-sine'
-            data-aos-duration='600'
-          >
+          <div className='imageColumn'>
             <img src={img2} alt='Restaurant ZIS' />
           </div>
         </div>
         <div className='sectionContainer'>
-          <div
-            className='imageColumn'
-            data-aos='fade-right'
-            data-aos-offset='120'
-            data-aos-easing='ease-in-sine'
-            data-aos-duration='600'
-          >
+          <div className='imageColumn'>
             <img src={img3} alt='Restaurant ZIS' />
           </div>
 
@@ -126,12 +108,7 @@ const Restaurant = () => {
         </div>
       </div>
 
-      <div
-        data-aos='fade-left'
-        data-aos-offset='120'
-        data-aos-easing='ease-in-sine'
-        data-aos-duration='600'
-      >
+      <div>
         <div style={{ marginBottom: '20vh' }}>
           <CarouselRestaurant />
         </div>
