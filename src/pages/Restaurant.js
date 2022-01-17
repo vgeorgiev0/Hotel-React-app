@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '../components/Banner';
 import Hero from '../components/Hero';
 import Title from '../components/Title';
 import CarouselRestaurant from '../components/CarouselRestaurant';
 import { Parallax } from 'react-parallax';
+import Aos from 'aos';
 import { Link } from 'react-router-dom';
 import { Trans } from 'react-i18next';
 import mainImage from '../images/restaurant/001Res.jpg';
@@ -12,6 +13,9 @@ import img2 from '../images/restaurant/13Res.jpg';
 import img3 from '../images/restaurant/11Res.jpg';
 
 const Restaurant = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   const mainTitle = (
     <Trans i18nKey='mainTitle'>Welcome to Rural household Morava ŽIS</Trans>
   );
@@ -36,15 +40,26 @@ const Restaurant = () => {
       <div className='services'>
         <Title title={'Have a celebration with us!'} />
       </div>
-
       <div className='columnLayout'>
         <div className='sectionContainer'>
-          <div className='imageColumn'>
+          <div
+            className='imageColumn'
+            data-aos='fade-right'
+            data-aos-offset='120'
+            data-aos-easing='ease-in-sine'
+            data-aos-duration='600'
+          >
             <img src={img1} alt='Restaurant ZIS' />
           </div>
 
           <div className='columnContent' style={{ background: '#E9ECEF' }}>
-            <div className='contentContainer'>
+            <div
+              className='contentContainer'
+              data-aos='fade-zoom-in'
+              data-aos-offset='200'
+              data-aos-easing='ease-in-sine'
+              data-aos-duration='600'
+            >
               <h5>We'll be happy to host your next event!</h5>
               <p>
                 No matter what occasion you're celebrating — birthday,
@@ -59,24 +74,48 @@ const Restaurant = () => {
         </div>
         <div className='sectionContainer'>
           <div className='columnContent' style={{ background: '#E9ECEF' }}>
-            <div className='contentContainer'>
+            <div
+              className='contentContainer'
+              data-aos='fade-zoom-in'
+              data-aos-offset='200'
+              data-aos-easing='ease-in-sine'
+              data-aos-duration='600'
+            >
               <h5>Capacity of up to 110 people in our ceremonial hall</h5>
               <div className='loading'>
                 <button className='btn-primary'>Contact Us</button>
               </div>
             </div>
           </div>
-          <div className='imageColumn'>
+          <div
+            className='imageColumn'
+            data-aos='fade-left'
+            data-aos-offset='120'
+            data-aos-easing='ease-in-sine'
+            data-aos-duration='600'
+          >
             <img src={img2} alt='Restaurant ZIS' />
           </div>
         </div>
         <div className='sectionContainer'>
-          <div className='imageColumn'>
+          <div
+            className='imageColumn'
+            data-aos='fade-right'
+            data-aos-offset='120'
+            data-aos-easing='ease-in-sine'
+            data-aos-duration='600'
+          >
             <img src={img3} alt='Restaurant ZIS' />
           </div>
 
           <div className='columnContent' style={{ background: '#E9ECEF' }}>
-            <div className='contentContainer'>
+            <div
+              className='contentContainer'
+              data-aos='fade-zoom-in'
+              data-aos-offset='200'
+              data-aos-easing='ease-in-sine'
+              data-aos-duration='600'
+            >
               <h5>The best country restaurant near Nis</h5>
               <p>
                 We offer a variety of dishes and drinks made with fresh
@@ -86,10 +125,23 @@ const Restaurant = () => {
           </div>
         </div>
       </div>
-      <div style={{ marginBottom: '20vh' }}>
-        <CarouselRestaurant />
+
+      <div
+        data-aos='fade-left'
+        data-aos-offset='120'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
+        <div style={{ marginBottom: '20vh' }}>
+          <CarouselRestaurant />
+        </div>
       </div>
-      <div>
+      <div
+        data-aos='fade-zoom-in'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
         <Hero hero='restaurantHero'>
           <h6>We'll be happy to host your next event!</h6>
           <Link to='/contact' className='btn-primary'>
