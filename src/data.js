@@ -23,12 +23,13 @@ import tina7 from './images/tina/7.JPG';
 // import roomEli5 from './images/eli/room/5.jpg';
 // import roomEli6 from './images/eli/room/6.jpg';
 
-import apartmentEli1 from './images/eli/apartment/1.jpg';
+import apartmentEli1 from './images/eli/apartment/main.png';
 import apartmentEli2 from './images/eli/apartment/2.jpg';
 import apartmentEli3 from './images/eli/apartment/3.jpg';
 import apartmentEli4 from './images/eli/apartment/4.jpg';
 import apartmentEli5 from './images/eli/apartment/5.jpg';
-import apartmentEli6 from './images/eli/apartment/6.jpg';
+import apartmentEli6 from './images/eli/apartment/1.jpg';
+import apartmentEli7 from './images/eli/apartment/6.jpg';
 
 import flat1 from './images/flat/1.jpg';
 import flat2 from './images/flat/2.jpg';
@@ -49,6 +50,7 @@ const data = [
     fields: {
       name: 'dekiTitle',
       slug: 'apartment-deki',
+      featured: true,
       double: true,
       doubleDetails: 'doubleDetails',
       firstRoom: [
@@ -310,7 +312,6 @@ const data = [
       price: 40,
       size: 36,
       capacity: 2,
-      featured: true,
       description: 'apartmentEliDetails',
       extras: [
         'apartmentEliExtra1',
@@ -361,6 +362,13 @@ const data = [
           fields: {
             file: {
               url: apartmentEli6,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: apartmentEli7,
             },
           },
         },
