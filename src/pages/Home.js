@@ -64,8 +64,8 @@ const Home = (props) => {
       </div>
 
       <div
-        data-aos='fade-zoom-in'
-        data-aos-offset='200'
+        data-aos='fade-left'
+        data-aos-offset='120'
         data-aos-easing='ease-in-sine'
         data-aos-duration='600'
       >
@@ -73,9 +73,9 @@ const Home = (props) => {
       </div>
       <div
         data-aos='fade-zoom-in'
-        data-aos-offset='400'
+        data-aos-offset='200'
         data-aos-easing='ease-in-sine'
-        data-aos-duration='800'
+        data-aos-duration='600'
       >
         <Testimonial />
       </div>
