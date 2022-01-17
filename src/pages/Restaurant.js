@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../components/Banner';
 import Hero from '../components/Hero';
 import Title from '../components/Title';
+import CarouselRestaurant from '../components/CarouselRestaurant';
 import { Parallax } from 'react-parallax';
 import { Link } from 'react-router-dom';
 import { Trans } from 'react-i18next';
@@ -85,8 +86,15 @@ const Restaurant = () => {
           </div>
         </div>
       </div>
+      <div style={{ marginBottom: '20vh' }}>
+        <CarouselRestaurant />
+      </div>
       <div>
-        <Hero hero='restaurantHero'></Hero>
+        <Hero hero='restaurantHero'>
+          <Link to='/contact' className='btn-primary'>
+            <Trans i18nKey='about'>Contact Us</Trans>
+          </Link>
+        </Hero>
       </div>
     </div>
   );
