@@ -91,6 +91,7 @@ const Restaurant = () => {
       </div>
       <div>
         <Hero hero='restaurantHero'>
+          <h6>We'll be happy to host your next event!</h6>
           <Link to='/contact' className='btn-primary'>
             <Trans i18nKey='about'>Contact Us</Trans>
           </Link>
