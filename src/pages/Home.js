@@ -64,8 +64,8 @@ const Home = (props) => {
       </div>
 
       <div
-        data-aos='fade-left'
-        data-aos-offset='120'
+        data-aos='fade-zoom-in'
+        data-aos-offset='200'
         data-aos-easing='ease-in-sine'
         data-aos-duration='600'
       >
