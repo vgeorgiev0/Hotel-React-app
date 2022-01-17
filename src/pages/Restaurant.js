@@ -56,9 +56,9 @@ const Restaurant = () => {
             <div
               className='contentContainer'
               data-aos='fade-zoom-in'
-              data-aos-offset='400'
+              data-aos-offset='200'
               data-aos-easing='ease-in-sine'
-              data-aos-duration='800'
+              data-aos-duration='600'
             >
               <h5>We'll be happy to host your next event!</h5>
               <p>
@@ -77,9 +77,9 @@ const Restaurant = () => {
             <div
               className='contentContainer'
               data-aos='fade-zoom-in'
-              data-aos-offset='400'
+              data-aos-offset='200'
               data-aos-easing='ease-in-sine'
-              data-aos-duration='800'
+              data-aos-duration='600'
             >
               <h5>Capacity of up to 110 people in our ceremonial hall</h5>
               <div className='loading'>
@@ -112,9 +112,9 @@ const Restaurant = () => {
             <div
               className='contentContainer'
               data-aos='fade-zoom-in'
-              data-aos-offset='400'
+              data-aos-offset='200'
               data-aos-easing='ease-in-sine'
-              data-aos-duration='800'
+              data-aos-duration='600'
             >
               <h5>The best country restaurant near Nis</h5>
               <p>
