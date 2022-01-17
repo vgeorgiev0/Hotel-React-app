@@ -102,7 +102,7 @@ h6 {
 /* end of globals */
 /* Navbar */
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -179,7 +179,6 @@ h6 {
   align-items: center;
   justify-content: center;
 }
-
 .roomsHero {
   background-image: url('./images/DSCN8304.JPG');
   max-width: 100%;
@@ -816,7 +815,7 @@ textarea {
   text-transform: none;
   font-size: 20px;
   word-spacing: 0.2em;
-  font-family: 'Libre Baskerville', serif;
+  font-family: Libre Baskerville, serif;
 }
 
 /* End of Tabs */
@@ -845,17 +844,17 @@ textarea {
   margin-bottom: 20rem;
 }
 
-.columnLayout {
+/* .columnLayout {
   padding: 0;
   margin: 0;
   margin-bottom: 20vh;
-}
-.columnLayout > body {
+} */
+/* .columnLayout > body {
   overflow-x: hidden;
   font-family: 'Libre Baskerville', serif;
-}
+} */
 
-.sectionContainer {
+/* .sectionContainer {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
@@ -863,36 +862,35 @@ textarea {
   margin-top: calc(var(--bs-gutter-y) * -1);
   margin-right: calc(var(--bs-gutter-x) / -2);
   margin-left: calc(var(--bs-gutter-x) / -2);
-}
+} */
 
-.contentContainer {
+/* .contentContainer {
   padding-top: 20px;
-}
-
+} */
+/* 
 .imageColumn {
   flex: 0 0 auto;
   width: 50%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.columnContent {
+} */
+/* .columnContent {
   flex: 0 0 auto;
   width: 50%;
   padding: 40px 50px;
-}
-.columnContent .contentContainer h5 {
+} */
+/* .columnContent .contentContainer h5 {
   font-weight: 700;
   font-size: 25px;
   margin-bottom: 20px;
-}
-.columnContent .contentContainer p {
+} */
+/* .columnContent .contentContainer p {
   font-weight: 400;
   font-size: 16px;
-  /* margin-bottom: 15px; */
   text-align: justify;
-}
-
+} */
+/* 
 @media screen and (max-width: 680px) {
   .contentContainer {
     flex-flow: row wrap;
@@ -914,7 +912,7 @@ textarea {
   .sectionContainer .columnContent .contentContainer h5 {
     margin-bottom: 5px;
   }
-}
+} */
 
 @media screen and (max-width: 980px) {
   .para {
@@ -930,9 +928,9 @@ textarea {
     height: 240px;
     padding: 10%;
   }
-  .imageColumn {
+  /* .imageColumn {
     width: 100%;
-  }
+  } */
 }
 
 /* End of Restaurant Page */

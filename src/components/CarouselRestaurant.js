@@ -17,7 +17,7 @@ import c14 from '../images/restaurant/c14.jpg';
 import c15 from '../images/restaurant/c15.jpg';
 import c16 from '../images/restaurant/c16.jpg';
 
-export default class Carousel extends Component {
+export default class CarouselRestaurant extends Component {
   render() {
     const settings = {
       dots: true,
