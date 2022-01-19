@@ -20,7 +20,7 @@ import c16 from '../images/carousel/c16.jpg';
 export default class Carousel extends Component {
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 3,

@@ -23,6 +23,8 @@
   "apartmentsTitle": "Naši apartmani",
   "restaurantButton": "Naš restoran",
   "btn2": "Idite na početnu stranicu",
+  "error": "Stranica nije pronađena",
+  "errorBtn": "Povratak na početnu stranicu",
   "contactTitle": "Kontaktirajte nas",
   "contactName": "Ime",
   "contactEmail": "E-mail",
