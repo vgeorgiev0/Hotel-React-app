@@ -3,11 +3,9 @@ import Banner from '../components/Banner';
 import Hero from '../components/Hero';
 import Title from '../components/Title';
 import CarouselRestaurant from '../components/CarouselRestaurant';
-import { Parallax } from 'react-parallax';
 import Aos from 'aos';
 import { Link } from 'react-router-dom';
 import { Trans } from 'react-i18next';
-import mainImage from '../images/restaurant/001Res.jpg';
 import img1 from '../images/restaurant/03Res.jpg';
 import img2 from '../images/restaurant/13Res.jpg';
 import img3 from '../images/restaurant/11Res.jpg';
@@ -24,19 +22,13 @@ const Restaurant = () => {
   );
   return (
     <div className='restaurantBody'>
-      <Parallax bgImage={mainImage} strength={450}>
-        <div className='para'>
-          <Banner
-            style={{ backgroundColor: '#E9ECEF' }}
-            title={mainTitle}
-            subtitle={mainSubtitle}
-          >
-            <Link to='/contact' className='btn-primary'>
-              <Trans i18nKey='about'>Contact Us</Trans>
-            </Link>
-          </Banner>
-        </div>
-      </Parallax>
+      <Hero hero='restaurantHero'>
+        <Banner title={mainTitle} subtitle={mainSubtitle}>
+          <Link to='/contact' className='btn-primary'>
+            <Trans i18nKey='about'>Contact Us</Trans>
+          </Link>
+        </Banner>
+      </Hero>
       <div className='services'>
         <Title title={'Have a celebration with us!'} />
       </div>
@@ -119,7 +111,7 @@ const Restaurant = () => {
         data-aos-easing='ease-in-sine'
         data-aos-duration='600'
       >
-        <Hero hero='restaurantHero'>
+        <Hero hero='restaurantFooterHero'>
           <h6>We'll be happy to host your next event!</h6>
           <Link to='/contact' className='btn-primary'>
             <Trans i18nKey='about'>Contact Us</Trans>
