@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Banner from '../components/Banner';
 import Hero from '../components/Hero';
-import Title from '../components/Title';
 import CarouselRestaurant from '../components/CarouselRestaurant';
 import Aos from 'aos';
 import { Link } from 'react-router-dom';
@@ -14,24 +13,35 @@ const Restaurant = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
-  const mainTitle = (
-    <Trans i18nKey='mainTitle'>Welcome to Rural household Morava ŽIS</Trans>
+  const restaurantTitle = <Trans i18nKey='restaurantTitle'></Trans>;
+  const restaurantDescription = (
+    <Trans i18nKey='restaurantDescription'>Wonderful place to enjoy.</Trans>
   );
-  const mainSubtitle = (
-    <Trans i18nKey='mainSubtitle'>Wonderful place to enjoy.</Trans>
-  );
+  const about = <Trans i18nKey='about' />;
+  const restaurantOp = <Trans i18nKey='restaurantOp' />;
+  const restaurantServTitle1 = <Trans i18nKey='restaurantServTitle1' />;
+  const restaurantServDesc1 = <Trans i18nKey='restaurantServDesc1' />;
+  const restaurantServTitle2 = <Trans i18nKey='restaurantServTitle2' />;
+  const restaurantServTitle3 = <Trans i18nKey='restaurantServTitle3' />;
+  const restaurantServDesc3 = <Trans i18nKey='restaurantServDesc3' />;
+  const restaurantGallery = <Trans i18nKey='restaurantGallery' />;
+  const restaurantFooter = <Trans i18nKey='restaurantFooter' />;
+
   return (
     <div className='restaurantBody'>
       <Hero hero='restaurantHero'>
-        <Banner title={mainTitle} subtitle={mainSubtitle}>
+        <Banner title={restaurantTitle} subtitle={restaurantDescription}>
           <Link to='/contact' className='btn-primary'>
-            <Trans i18nKey='about'>Contact Us</Trans>
+            {about}
           </Link>
         </Banner>
       </Hero>
-      <div className='services'>
-        <Title title={'Have a celebration with us!'} />
-      </div>
+      <h2
+        style={{ textAlign: 'center', marginBottom: '20vh', marginTop: '20vh' }}
+      >
+        {restaurantOp}
+      </h2>
+
       <div className='columnLayout'>
         <div className='sectionContainer'>
           <div className='imageColumn'>
@@ -46,15 +56,8 @@ const Restaurant = () => {
               data-aos-easing='ease-in-sine'
               data-aos-duration='600'
             >
-              <h5>We'll be happy to host your next event!</h5>
-              <p>
-                No matter what occasion you're celebrating — birthday,
-                anniversary, marriage, baby shower — we offer customized menus
-                for your group size. Celebrate together with more than 110
-                people in our ceremonial hall where we organize all sorts of
-                celebrations such as weddings, birthdays, banquets, and all of
-                your happy moments.
-              </p>
+              <h5>{restaurantServTitle1}</h5>
+              <p>{restaurantServDesc1}</p>
             </div>
           </div>
         </div>
@@ -67,9 +70,11 @@ const Restaurant = () => {
               data-aos-easing='ease-in-sine'
               data-aos-duration='600'
             >
-              <h5>Capacity of up to 110 people in our ceremonial hall</h5>
+              <h5 style={{ textAlign: 'center' }}>{restaurantServTitle2}</h5>
               <div className='loading'>
-                <button className='btn-primary'>Contact Us</button>
+                <Link to='/contact' className='btn-primary'>
+                  {about}
+                </Link>
               </div>
             </div>
           </div>
@@ -90,17 +95,17 @@ const Restaurant = () => {
               data-aos-easing='ease-in-sine'
               data-aos-duration='600'
             >
-              <h5>The best country restaurant near Nis</h5>
-              <p>
-                We offer a variety of dishes and drinks made with fresh
-                ingredients and traditional Serbian recipes.{' '}
-              </p>
+              <h5>{restaurantServTitle3}</h5>
+              <p>{restaurantServDesc3}</p>
             </div>
           </div>
         </div>
       </div>
 
       <div>
+        <h3 style={{ textAlign: 'center', marginBottom: '10vh' }}>
+          {restaurantGallery}
+        </h3>
         <div style={{ marginBottom: '20vh' }}>
           <CarouselRestaurant />
         </div>
@@ -112,7 +117,7 @@ const Restaurant = () => {
         data-aos-duration='600'
       >
         <Hero hero='restaurantFooterHero'>
-          <h6>We'll be happy to host your next event!</h6>
+          <h6>{restaurantFooter}</h6>
           <Link to='/contact' className='btn-primary'>
             <Trans i18nKey='about'>Contact Us</Trans>
           </Link>

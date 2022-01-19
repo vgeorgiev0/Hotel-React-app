@@ -745,6 +745,11 @@ textarea {
   color: var(--primaryColor);
 }
 
+.language-btn img {
+  height: 19px;
+  width: 32px;
+}
+
 /* End of Language buttons */
 
 /* Carousel */
