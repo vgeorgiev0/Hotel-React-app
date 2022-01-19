@@ -53,24 +53,28 @@ const data = [
       featured: true,
       double: true,
       doubleDetails: 'doubleDetails',
-      firstRoom: [
-        {
-          fields: {
-            name: 'firstRoomDeki',
-            price: 20,
-            capacity: 2,
-          },
+      firstRoom: {
+        fields: {
+          name: 'firstRoomDeki',
+          price: 20,
+          capacity: 2,
+          description: 'dekiDetails',
+          extras: ['dekiExtra1', 'dekiExtra2', 'dekiExtra3', 'dekiExtra4'],
+          images: [],
         },
-      ],
-      secondRoom: [
-        {
-          fields: {
-            name: 'secondRoomDeki',
-            price: 20,
-            capacity: 2,
-          },
+      },
+
+      secondRoom: {
+        fields: {
+          name: 'secondRoomDeki',
+          price: 20,
+          capacity: 2,
+          description: 'dekiDetails',
+          extras: ['dekiExtra1', 'dekiExtra2', 'dekiExtra3', 'dekiExtra4'],
+          images: [],
         },
-      ],
+      },
+
       price: 45,
       size: 54,
       capacity: 4,
@@ -291,24 +295,40 @@ const data = [
       slug: 'apartment-eli',
       double: true,
       doubleDetails: 'doubleDetails',
-      firstRoom: [
-        {
-          fields: {
-            name: 'firstRoomEli',
-            price: 25,
-            capacity: 2,
-          },
+      firstRoom: {
+        fields: {
+          name: 'firstRoomEli',
+          price: 25,
+          capacity: 2,
+          extras: [
+            'apartmentEliExtra1',
+            'apartmentEliExtra2',
+            'apartmentEliExtra3',
+            'apartmentEliExtra4',
+            'apartmentEliExtra5',
+            'apartmentEliExtra6',
+            'apartmentEliExtra7',
+          ],
         },
-      ],
-      secondRoom: [
-        {
-          fields: {
-            name: 'secondRoomEli',
-            price: 20,
-            capacity: 2,
-          },
+      },
+
+      secondRoom: {
+        fields: {
+          name: 'secondRoomEli',
+          price: 20,
+          capacity: 2,
+          extras: [
+            'apartmentEliExtra1',
+            'apartmentEliExtra2',
+            'apartmentEliExtra3',
+            'apartmentEliExtra4',
+            'apartmentEliExtra5',
+            'apartmentEliExtra6',
+            'apartmentEliExtra7',
+          ],
         },
-      ],
+      },
+
       price: 40,
       size: 36,
       capacity: 2,

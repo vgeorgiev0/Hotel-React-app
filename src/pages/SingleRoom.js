@@ -41,13 +41,10 @@ class SingleRoom extends Component {
       extras,
       images,
       double,
+      doubleDetails,
       firstRoom,
       secondRoom,
-      doubleDetails,
     } = room;
-
-    console.log(firstRoom);
-    console.log(secondRoom);
 
     const [mainImg, ...defaultImg] = images;
 
@@ -102,8 +99,20 @@ class SingleRoom extends Component {
         {double && (
           <section className='room-extras'>
             <h6 className='loading'>Book only one of the rooms</h6>
+            <h1>{t(firstRoom.fields.description)}</h1>
             <ul className='extras'>
-              <li>{doubleDetails}</li>
+              <li>{t(doubleDetails)}</li>
+            </ul>
+            <article className='desc'>
+              <h3>{t('apartmentDetail')}</h3>
+              <p>{t(description)}</p>
+            </article>
+
+            <h6>{t('roomExtras')}</h6>
+            <ul className='extras'>
+              {firstRoom.fields.extras.map((item, index) => {
+                return <li key={index}>* {t(item)}</li>;
+              })}
             </ul>
           </section>
         )}
