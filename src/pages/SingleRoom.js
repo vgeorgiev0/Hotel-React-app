@@ -21,13 +21,14 @@ class SingleRoom extends Component {
   render() {
     const { getRoom } = this.context;
     const room = getRoom(this.state.slug);
+    const { t } = this.props;
 
     if (!room) {
       return (
         <div className='error'>
           <h3>No such room could be found...</h3>
           <Link to='/apartments' className='btn-primary'>
-            Back to apartments
+            {t('backToApartments')}
           </Link>
         </div>
       );
@@ -41,14 +42,12 @@ class SingleRoom extends Component {
       extras,
       images,
       double,
-      doubleDetails,
+      // doubleDetails,
       firstRoom,
       secondRoom,
     } = room;
 
     const [mainImg, ...defaultImg] = images;
-
-    const { t } = this.props;
 
     return (
       <div>
@@ -127,6 +126,11 @@ class SingleRoom extends Component {
             </div>
           </section>
         )}
+        <div className='loading' style={{ paddingBottom: '10vh' }}>
+          <Link to='/contact' className='btn-primary'>
+            {t('contactTitle')}
+          </Link>
+        </div>
       </div>
     );
   }
