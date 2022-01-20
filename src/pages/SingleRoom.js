@@ -128,7 +128,7 @@ class SingleRoom extends Component {
         )}
         <div className='loading' style={{ paddingBottom: '10vh' }}>
           <Link to='/contact' className='btn-primary'>
-            {t('contactTitle')}
+            {t('book')}
           </Link>
         </div>
       </div>
