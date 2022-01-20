@@ -9,6 +9,8 @@ import {
 import './App.css';
 import { useTranslation } from 'react-i18next';
 
+import SingleRoom from './pages/SingleRoom';
+
 import v1rt from './images/V1rtuoso.gif';
 
 import Navbar from './components/Navbar';
@@ -19,10 +21,10 @@ import bgFlag from './images/flag/bgFlag.png';
 import rsFlag from './images/flag/rsFlag.png';
 import usFlag from './images/flag/usFlag.png';
 
-const Restaurant = React.lazy(() => import('./pages/Restaurant'));
-const Rooms = React.lazy(() => import('./pages/Rooms'));
 const Home = React.lazy(() => import('./pages/Home'));
-const SingleRoom = React.lazy(() => import('./pages/SingleRoom'));
+const Rooms = React.lazy(() => import('./pages/Rooms'));
+// const SingleRoom = React.lazy(() => import('./pages/SingleRoom'));
+const Restaurant = React.lazy(() => import('./pages/Restaurant'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Error = React.lazy(() => import('./pages/Error'));
 

@@ -19,12 +19,12 @@
   "featured": "Featured Rooms",
   "aboutUs": "About us",
   "address": "Address",
-  "error": "Page not Found",
-  "errorBtn": "Return Home",
   "addressDesc": "Mezgraja vilage, 18202 Gornja Toponica, Niš, R. Srbija",
   "phone": "Phone",
   "email": "E-mail",
   "apartmentsTitle": "Our Apartments",
+  "error": "Page not Found",
+  "errorBtn": "Return Home",
   "restaurantButton": "Our Restaurant",
   "btn2": "return home",
   "noApartments": "No apartments matched your search parameters",
@@ -34,6 +34,7 @@
   "contactMessage": "Message",
   "submitBtn": "Submit",
   "intro": "A place where you can feel at home",
+  "introDesc": "Селско домакинство Морава ЖИС, място, където идеалната почивка е гарантирана, се намира в село Мезграя, кето се намира на границата на Нишката и Алексинацката котловина, на около 12 км северозападно от центъра на Ниш и е разположено на река Морава. Близостта на различни културни забележителности, както и многото пикници сред природата и особено спокойствието на непокътната природа правят местността ни изключително привлекателна и незабравима.",
   "introAbout": "ZIS",
   "introAboutDesc": "Rural household Morava ZIS is a place where ideal rest is guaranteed. It is located in the village of Mezgraya, which is located on the border of Nis and Aleksinac valley, about twelve km northwest of the center of Nis. Located on the river Morava. The proximity of various cultural attractions, as well as the many picnics in nature and especially the tranquility of untouched nature, make the area extremely attractive and unforgettable.",
   "introAccommodation": "Accommodation",
@@ -118,5 +119,9 @@
   "restaurantServDesc3": "We offer a variety of dishes and drinks made with fresh ingredients and traditional Serbian recipes.",
   "restaurantGallery": "A picture is worth more than a thousand words",
   "restaurantFooter": "We'll be happy to host your next event!",
-  "doubleDetails": "Детаили относно Двете стаи"
+  "doubleDetails": "Детаили относно Двете стаи",
+  "firstRoomDeki": "Малка Стая Деки",
+  "firstRoomDekiDetails": "Детаили относно Малка Стая Деки",
+  "secondRoomDeki": "Голяма Стая Деки",
+  "secondRoomDekiDetails": "Детаили относно Голяма Стая Деки"
 }

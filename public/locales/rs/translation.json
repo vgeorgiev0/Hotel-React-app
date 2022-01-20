@@ -4,6 +4,8 @@
   "about": "Kontaktirajte nas",
   "mainTitle": "Dobro došli u seosko domaćinstvo Morava ŽIS",
   "mainSubtitle": "Divno mesto za uživanje",
+  "welcome": "Welcome to ŽIS",
+  "sub": "Come and stay with us",
   "btn1": "Naši apartmani",
   "service": "Predlažemo",
   "cuisine": "Autentična srpska kuhinja",
@@ -25,6 +27,7 @@
   "btn2": "Idite na početnu stranicu",
   "error": "Stranica nije pronađena",
   "errorBtn": "Povratak na početnu stranicu",
+  "noApartments": "No apartments matched your search parameters",
   "contactTitle": "Kontaktirajte nas",
   "contactName": "Ime",
   "contactEmail": "E-mail",
@@ -44,6 +47,7 @@
   "reviews": "Svedočenja",
   "ourVideo": "Naš Promotivni Video",
   "apartmentInfo": "Informacije",
+  "doubleApartmentInfo": "Information about the whole Apartment",
   "apartment": "Stan",
   "perNight": "Cena po noći",
   "roomSize": "Područje",
@@ -116,5 +120,8 @@
   "restaurantGallery": "Pictures speak more than words",
   "restaurantFooter": "We'll be happy to host your next event!",
   "doubleDetails": "Детаили относно Двете стаи",
-  "doubleApartmentInfo": "Информация за целия апартамент"
+  "firstRoomDeki": "Малка Стая Деки",
+  "firstRoomDekiDetails": "Детаили относно Малка Стая Деки",
+  "secondRoomDeki": "Голяма Стая Деки",
+  "secondRoomDekiDetails": "Детаили относно Голяма Стая Деки"
 }

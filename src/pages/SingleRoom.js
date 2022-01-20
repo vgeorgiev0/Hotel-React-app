@@ -98,22 +98,33 @@ class SingleRoom extends Component {
         </section>
         {double && (
           <section className='room-extras'>
-            <h6 className='loading'>Book only one of the rooms</h6>
-            <h1>{t(firstRoom.fields.description)}</h1>
-            <ul className='extras'>
-              <li>{t(doubleDetails)}</li>
-            </ul>
-            <article className='desc'>
-              <h3>{t('apartmentDetail')}</h3>
-              <p>{t(description)}</p>
-            </article>
-
-            <h6>{t('roomExtras')}</h6>
-            <ul className='extras'>
-              {firstRoom.fields.extras.map((item, index) => {
-                return <li key={index}>* {t(item)}</li>;
-              })}
-            </ul>
+            <h2 className='loading'>{t('doubleDetails')}</h2>
+            <div className='single-room-info'>
+              <article className='desc'>
+                <h3>{t(firstRoom.fields.name)}</h3>
+                <h6>{t(firstRoom.fields.description)}</h6>
+                <ul className='extras'>
+                  <li>
+                    {t('perNight')} : €{firstRoom.fields.price}
+                  </li>
+                  {firstRoom.fields.extras.map((item, index) => {
+                    return <li key={index}>* {t(item)}</li>;
+                  })}
+                </ul>
+              </article>
+              <article className='desc'>
+                <h3> {t(secondRoom.fields.name)}</h3>
+                <h6>{t(secondRoom.fields.description)}</h6>
+                <ul className='extras'>
+                  <li>
+                    {t('perNight')} : €{secondRoom.fields.price}
+                  </li>
+                  {secondRoom.fields.extras.map((item, index) => {
+                    return <li key={index}>* {t(item)}</li>;
+                  })}
+                </ul>
+              </article>
+            </div>
           </section>
         )}
       </div>
