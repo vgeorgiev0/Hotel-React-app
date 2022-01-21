@@ -13,6 +13,7 @@ class SingleRoom extends Component {
     this.state = {
       slug: this.props.match.params.slug,
       defaultBcg,
+      apartment: 'apartment' || 'flatName',
     };
   }
   static contextType = RoomContext;
@@ -49,10 +50,16 @@ class SingleRoom extends Component {
 
     const [mainImg, ...defaultImg] = images;
 
+    let apartmentName = this.state.apartment;
+
+    if (this.state.slug === 'flat') {
+      apartmentName = '';
+    }
+
     return (
       <div>
         <RoomImage img={mainImg || this.state.defaultBcg}>
-          <Banner title={` ${t('apartment')} ${t(name)} `}>
+          <Banner title={` ${t(apartmentName)} ${t(name)} `}>
             <Link to='/apartments' className='btn-primary'>
               {t('backToApartments')}
             </Link>
