@@ -117,6 +117,14 @@ class SingleRoom extends Component {
                       {t('perNight')} : € {firstRoom.fields.price}
                     </h6>
                   </li>
+                  <li>
+                    <h6 style={{ fontWeight: '300' }}>
+                      {t('roomCapacity')} :
+                      {firstRoom.fields.capacity > 1
+                        ? ` ${firstRoom.fields.capacity} ${t('people')} `
+                        : `${firstRoom.fields.capacity} ${t('person')}`}
+                    </h6>
+                  </li>
                 </ul>
               </article>
               <article className='desc'>
@@ -133,6 +141,14 @@ class SingleRoom extends Component {
                   <li>
                     <h6 style={{ fontWeight: '300' }}>
                       {t('perNight')} : € {secondRoom.fields.price}
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 style={{ fontWeight: '300' }}>
+                      {t('roomCapacity')} :
+                      {secondRoom.fields.capacity > 1
+                        ? ` ${secondRoom.fields.capacity} ${t('people')} `
+                        : `${secondRoom.fields.capacity} ${t('person')}`}
                     </h6>
                   </li>
                 </ul>
