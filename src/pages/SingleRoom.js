@@ -97,30 +97,44 @@ class SingleRoom extends Component {
         </section>
         {double && (
           <section className='room-extras'>
-            <h2 className='loading'>{t('doubleDetails')}</h2>
+            <h2 className='loading' style={{ marginTop: '4rem' }}>
+              {t('doubleDetails')}
+            </h2>
             <div className='single-room-info'>
               <article className='desc'>
-                <h3>{t(firstRoom.fields.name)}</h3>
-                <h6>{t(firstRoom.fields.description)}</h6>
-                <ul className='extras'>
-                  <li>
-                    {t('perNight')} : €{firstRoom.fields.price}
-                  </li>
+                <h3 style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                  {t(firstRoom.fields.name)}
+                </h3>
+                <h6 style={{ textAlign: 'center' }}>
+                  {t(firstRoom.fields.description)}
+                </h6>
+                <ul className='extras' style={{ textAlign: 'center' }}>
                   {firstRoom.fields.extras.map((item, index) => {
                     return <li key={index}>* {t(item)}</li>;
                   })}
+                  <li>
+                    <h6 style={{ fontWeight: '300' }}>
+                      {t('perNight')} : € {firstRoom.fields.price}
+                    </h6>
+                  </li>
                 </ul>
               </article>
               <article className='desc'>
-                <h3> {t(secondRoom.fields.name)}</h3>
-                <h6>{t(secondRoom.fields.description)}</h6>
-                <ul className='extras'>
-                  <li>
-                    {t('perNight')} : €{secondRoom.fields.price}
-                  </li>
+                <h3 style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                  {t(secondRoom.fields.name)}
+                </h3>
+                <h6 style={{ textAlign: 'center' }}>
+                  {t(secondRoom.fields.description)}
+                </h6>
+                <ul className='extras' style={{ textAlign: 'center' }}>
                   {secondRoom.fields.extras.map((item, index) => {
                     return <li key={index}>* {t(item)}</li>;
                   })}
+                  <li>
+                    <h6 style={{ fontWeight: '300' }}>
+                      {t('perNight')} : € {secondRoom.fields.price}
+                    </h6>
+                  </li>
                 </ul>
               </article>
             </div>

@@ -55,22 +55,22 @@ const data = [
       doubleDetails: 'doubleDetails',
       firstRoom: {
         fields: {
-          name: 'firstRoomDeki',
+          name: 'firstRoom',
           price: 20,
           capacity: 2,
-          description: 'firstRoomDekiDetails',
-          extras: ['dekiExtra1', 'dekiExtra2', 'dekiExtra3', 'dekiExtra4'],
+          description: 'roomDetails',
+          extras: ['dekiExtra1', 'dekiExtra2', 'roomsDekiExtra1', 'dekiExtra4'],
           images: [],
         },
       },
 
       secondRoom: {
         fields: {
-          name: 'secondRoomDeki',
+          name: 'secondRoom',
           price: 20,
           capacity: 2,
-          description: 'secondRoomDekiDetails',
-          extras: ['dekiExtra1', 'dekiExtra2', 'dekiExtra3', 'dekiExtra4'],
+          description: 'roomDetails',
+          extras: ['dekiExtra1', 'dekiExtra2', 'roomsDekiExtra1', 'dekiExtra4'],
           images: [],
         },
       },
@@ -297,7 +297,7 @@ const data = [
       doubleDetails: 'doubleDetails',
       firstRoom: {
         fields: {
-          name: 'firstRoomEli',
+          name: 'firstRoom',
           price: 25,
           capacity: 2,
           extras: [
@@ -307,14 +307,13 @@ const data = [
             'apartmentEliExtra4',
             'apartmentEliExtra5',
             'apartmentEliExtra6',
-            'apartmentEliExtra7',
           ],
         },
       },
 
       secondRoom: {
         fields: {
-          name: 'secondRoomEli',
+          name: 'secondRoom',
           price: 20,
           capacity: 2,
           extras: [
@@ -324,7 +323,6 @@ const data = [
             'apartmentEliExtra4',
             'apartmentEliExtra5',
             'apartmentEliExtra6',
-            'apartmentEliExtra7',
           ],
         },
       },

@@ -117,12 +117,12 @@
   "restaurantServTitle2": "Капацитет до 110 души в нашата тържествена зала",
   "restaurantServTitle3": "Най-добрият провинциален ресторант близо до Ниш",
   "restaurantServDesc3": "Предлагаме разнообразие от ястия и напитки, приготвени с пресни продукти и традиционни сръбски рецепти.",
-  "restaurantGallery": "Една снимка струва повече от хиляда думи",
+  "restaurantGallery": "Slika košta više od hiljadu reči",
   "restaurantFooter": "Ще се радваме да бъдем домакини на следващото ви събитие!",
-  "doubleDetails": "Информация относно Двете стаи",
-  "firstRoomDeki": "Малка Стая Деки",
-  "firstRoomDekiDetails": "Детаили относно Малка Стая Деки",
-  "secondRoomDeki": "Голяма Стая Деки",
-  "secondRoomDekiDetails": "Детаили относно Голяма Стая Деки",
-  "book": "Запазете този апартамент"
+  "doubleDetails": "Детайли относно Двете стаи",
+  "firstRoom": "Стая \"A\"",
+  "roomDetails": "Детайли относно Стаята",
+  "secondRoom": "Стая \"Б\"",
+  "roomsDekiExtra1": "Кухня",
+  "book": "Направете запитване за този апартамент"
 }

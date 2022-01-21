@@ -119,10 +119,10 @@
   "restaurantServDesc3": "We offer a variety of dishes and drinks made with fresh ingredients and traditional Serbian recipes.",
   "restaurantGallery": "A picture is worth more than a thousand words",
   "restaurantFooter": "We'll be happy to host your next event!",
-  "doubleDetails": "Детаили относно Двете стаи",
-  "firstRoomDeki": "Малка Стая Деки",
-  "firstRoomDekiDetails": "Детаили относно Малка Стая Деки",
-  "secondRoomDeki": "Голяма Стая Деки",
-  "secondRoomDekiDetails": "Детаили относно Голяма Стая Деки",
-  "book": "Book this apartment"
+  "doubleDetails": "Details about the two rooms",
+  "firstRoom": "Room \"A\"",
+  "secondRoom": "Room \"B\"",
+  "roomDetails": "Room Details",
+  "roomsDekiExtra1": "Kitchen",
+  "book": "request this apartment"
 }
