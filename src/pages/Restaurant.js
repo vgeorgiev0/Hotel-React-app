@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Banner from '../components/Banner';
 import Hero from '../components/Hero';
+import { Helmet } from 'react-helmet-async';
 import CarouselRestaurant from '../components/CarouselRestaurant';
 import Aos from 'aos';
 import { Link } from 'react-router-dom';
@@ -29,6 +30,14 @@ const Restaurant = () => {
 
   return (
     <div className='restaurantBody'>
+      <Helmet>
+        <title>Our Restaurant</title>
+        <meta
+          name='description'
+          content='We pay special attention to our beautiful restaurant with a capacity of a hundred guests, where for years we organize unforgettable celebrations: weddings, first birthdays, coming of age and others.'
+        />
+        <link rel='canonical' href='/restaurant' />
+      </Helmet>
       <Hero hero='restaurantHero'>
         <Banner title={restaurantTitle} subtitle={restaurantDescription}>
           <Link to='/contact' className='btn-primary'>
@@ -41,7 +50,6 @@ const Restaurant = () => {
       >
         {restaurantOp}
       </h2>
-
       <div className='columnLayout'>
         <div className='sectionContainer'>
           <div className='imageColumn'>
@@ -101,7 +109,6 @@ const Restaurant = () => {
           </div>
         </div>
       </div>
-
       <div>
         <h3 style={{ textAlign: 'center', marginBottom: '10vh' }}>
           {restaurantGallery}

@@ -112,9 +112,6 @@ class SingleRoom extends Component {
                 <h3 style={{ textAlign: 'center', marginBottom: '3rem' }}>
                   {t(firstRoom.fields.name)}
                 </h3>
-                <h6 style={{ textAlign: 'center' }}>
-                  {t(firstRoom.fields.description)}
-                </h6>
                 <ul className='extras' style={{ textAlign: 'center' }}>
                   {firstRoom.fields.extras.map((item, index) => {
                     return <li key={index}>* {t(item)}</li>;
@@ -138,9 +135,6 @@ class SingleRoom extends Component {
                 <h3 style={{ textAlign: 'center', marginBottom: '3rem' }}>
                   {t(secondRoom.fields.name)}
                 </h3>
-                <h6 style={{ textAlign: 'center' }}>
-                  {t(secondRoom.fields.description)}
-                </h6>
                 <ul className='extras' style={{ textAlign: 'center' }}>
                   {secondRoom.fields.extras.map((item, index) => {
                     return <li key={index}>* {t(item)}</li>;
