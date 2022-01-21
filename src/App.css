@@ -93,7 +93,7 @@ h6 {
 }
 .empty-search {
   text-align: center;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   margin: 2rem 0;
   padding: 1rem;
   letter-spacing: var(--mainSpacing);
@@ -268,7 +268,7 @@ h6 {
 .section-title h4 {
   font-size: 2rem;
   letter-spacing: var(--mainSpacing);
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   margin-bottom: 1rem;
 }
 .section-title div {
@@ -376,7 +376,7 @@ h6 {
 }
 .services h6 {
   letter-spacing: var(--mainSpacing);
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .services p {
   width: 80%;
@@ -515,7 +515,7 @@ h6 {
   margin: 1rem 0;
 }
 .desc h3 {
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   letter-spacing: var(--mainSpacing);
 }
 .desc p {
@@ -523,7 +523,7 @@ h6 {
 }
 .info h3,
 .info h6 {
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   letter-spacing: var(--mainSpacing);
 }
 
