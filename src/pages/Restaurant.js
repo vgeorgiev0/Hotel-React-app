@@ -2,10 +2,11 @@ import React, { useEffect } from 'react';
 import Banner from '../components/Banner';
 import Hero from '../components/Hero';
 import { Helmet } from 'react-helmet-async';
-import CarouselRestaurant from '../components/CarouselRestaurant';
-import Aos from 'aos';
 import { Link } from 'react-router-dom';
 import { Trans } from 'react-i18next';
+import ReactGa from 'react-ga';
+import CarouselRestaurant from '../components/CarouselRestaurant';
+import Aos from 'aos';
 import img1 from '../images/restaurant/03Res.jpg';
 import img2 from '../images/restaurant/13Res.jpg';
 import img3 from '../images/restaurant/11Res.jpg';
@@ -14,6 +15,13 @@ const Restaurant = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+
+  useEffect(() => {
+    ReactGa.initialize('UA-217800648-1');
+
+    ReactGa.pageview('/restaurant');
+  });
+
   const restaurantTitle = <Trans i18nKey='restaurantTitle'></Trans>;
   const restaurantDescription = (
     <Trans i18nKey='restaurantDescription'>Wonderful place to enjoy.</Trans>

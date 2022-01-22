@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ContactContainer from '../components/ContactContainer';
+import ReactGa from 'react-ga';
 import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
+  useEffect(() => {
+    ReactGa.initialize('UA-217800648-1');
+
+    ReactGa.pageview('/contact');
+  });
+
   return (
     <div>
       <Helmet>

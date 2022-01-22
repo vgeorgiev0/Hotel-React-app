@@ -3,10 +3,11 @@ import Banner from '../components/Banner';
 import Hero from '../components/Hero';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Trans } from 'react-i18next';
+import ReactGa from 'react-ga';
 import Services from '../components/Services';
 import FeaturedRooms from '../components/FeaturedRooms';
 import SimpleMap from '../components/Maps';
-import { Trans } from 'react-i18next';
 import Carousel from '../components/Carousel';
 import Intro from '../components/Intro';
 import Aos from 'aos';
@@ -18,6 +19,12 @@ const Home = (props) => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+
+  useEffect(() => {
+    ReactGa.initialize('UA-217800648-1');
+
+    ReactGa.pageview('/');
+  });
 
   const mainTitle = (
     <Trans i18nKey='mainTitle'>Welcome to Rural household Morava ŽIS</Trans>

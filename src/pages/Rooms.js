@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import { Link } from 'react-router-dom';
 import { Trans } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
+import ReactGa from 'react-ga';
 import RoomContainer from '../components/RoomContainer';
 
 const Rooms = () => {
+  useEffect(() => {
+    ReactGa.initialize('UA-217800648-1');
+
+    ReactGa.pageview('/apartments');
+  });
+
   const title = <Trans i18nKey='apartmentsTitle'></Trans>;
   const btn = <Trans i18nKey='btn2'></Trans>;
   return (
