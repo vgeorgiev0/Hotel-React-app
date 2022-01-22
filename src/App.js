@@ -9,7 +9,7 @@ import {
 import './App.css';
 import { useTranslation } from 'react-i18next';
 
-import ReactGa from 'react-ga';
+import ReactGA from 'react-ga';
 
 import Navbar from './components/Navbar';
 
@@ -29,7 +29,6 @@ const Error = React.lazy(() => import('./pages/Error'));
 
 const _ScrollToTop = (props) => {
   const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -37,23 +36,30 @@ const _ScrollToTop = (props) => {
   return props.children;
 };
 
+const usePageViews = () => {
+  const location = useLocation();
+  useEffect(() => {
+    if (!window.GA_INITIALIZED) {
+      ReactGA.initialize('UA-217800648-1');
+      window.GA_INITIALIZED = true;
+    }
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  }, [location]);
+};
+
 const ScrollToTop = withRouter(_ScrollToTop);
 
 function App() {
+  usePageViews();
   const { i18n } = useTranslation();
-
-  useEffect(() => {
-    ReactGa.initialize('UA-217800648-1');
-
-    ReactGa.pageview(window.location.pathname + window.location.search);
-  }, []);
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   };
 
   return (
-    <div>
+    <main>
       <Router>
         <Navbar />
         <br />
@@ -116,7 +122,7 @@ function App() {
           />
         </a>
       </div>
-    </div>
+    </main>
   );
 }
 
