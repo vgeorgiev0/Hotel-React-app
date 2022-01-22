@@ -9,6 +9,8 @@ import {
 import './App.css';
 import { useTranslation } from 'react-i18next';
 
+import ReactGa from 'react-ga';
+
 import Navbar from './components/Navbar';
 
 import Footer from './components/Footer';
@@ -34,6 +36,12 @@ const _ScrollToTop = (props) => {
 
   return props.children;
 };
+
+useEffect(() => {
+  ReactGa.initialize('UA-217800648-1');
+
+  ReactGa.pageview(window.location.pathname + window.location.search);
+}, []);
 
 const ScrollToTop = withRouter(_ScrollToTop);
 
