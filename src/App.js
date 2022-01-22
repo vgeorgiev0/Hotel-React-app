@@ -37,16 +37,16 @@ const _ScrollToTop = (props) => {
   return props.children;
 };
 
-useEffect(() => {
-  ReactGa.initialize('UA-217800648-1');
-
-  ReactGa.pageview(window.location.pathname + window.location.search);
-}, []);
-
 const ScrollToTop = withRouter(_ScrollToTop);
 
 function App() {
   const { i18n } = useTranslation();
+
+  useEffect(() => {
+    ReactGa.initialize('UA-217800648-1');
+
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
