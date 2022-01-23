@@ -36,7 +36,7 @@ const _ScrollToTop = (props) => {
   return props.children;
 };
 
-const GOOGLE_ANALYTICS_API = process.env.GOOGLE_ANALYTICS_API;
+const GOOGLE_ANALYTICS_API = process.env.REACT_APP_GOOGLE_ANALYTICS_API;
 
 const ScrollToTop = withRouter(_ScrollToTop);
 
