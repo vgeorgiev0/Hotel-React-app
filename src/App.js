@@ -39,15 +39,10 @@ const _ScrollToTop = (props) => {
 const GOOGLE_ANALYTICS_API = process.env.GOOGLE_ANALYTICS_API;
 
 const usePageViews = () => {
-  const location = useLocation();
   useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      ReactGA.initialize(GOOGLE_ANALYTICS_API);
-      window.GA_INITIALIZED = true;
-    }
-    ReactGA.set({ page: location.pathname });
-    ReactGA.pageview(location.pathname);
-  }, [location]);
+    ReactGA.initialize(GOOGLE_ANALYTICS_API);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 };
 
 const ScrollToTop = withRouter(_ScrollToTop);
