@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import defaultBcg from '../images/DSCN8304.JPG';
 import Banner from '../components/Banner';
 import { Link } from 'react-router-dom';
 import { RoomContext } from '../context';
 import RoomImage from '../components/StyledHero';
 import { withTranslation } from 'react-i18next';
+import ReactGA from 'react-ga';
 
 class SingleRoom extends Component {
   constructor(props) {
@@ -23,6 +24,9 @@ class SingleRoom extends Component {
     const { getRoom } = this.context;
     const room = getRoom(this.state.slug);
     const { t } = this.props;
+
+    ReactGA.initialize('UA-217800648-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
     if (!room) {
       return (
