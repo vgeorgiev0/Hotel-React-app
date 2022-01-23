@@ -36,11 +36,13 @@ const _ScrollToTop = (props) => {
   return props.children;
 };
 
+const GOOGLE_ANALYTICS_API = process.env.GOOGLE_ANALYTICS_API;
+
 const usePageViews = () => {
   const location = useLocation();
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
-      ReactGA.initialize('UA-217800648-1');
+      ReactGA.initialize(GOOGLE_ANALYTICS_API);
       window.GA_INITIALIZED = true;
     }
     ReactGA.set({ page: location.pathname });
