@@ -38,15 +38,14 @@ const _ScrollToTop = (props) => {
 
 const GOOGLE_ANALYTICS_API = process.env.GOOGLE_ANALYTICS_API;
 
-useEffect(() => {
-  ReactGA.initialize(GOOGLE_ANALYTICS_API);
-  ReactGA.pageview(window.location.pathname + window.location.search);
-}, []);
-
 const ScrollToTop = withRouter(_ScrollToTop);
 
 function App() {
   const { i18n } = useTranslation();
+  useEffect(() => {
+    ReactGA.initialize(GOOGLE_ANALYTICS_API);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
