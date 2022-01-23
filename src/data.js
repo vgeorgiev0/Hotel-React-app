@@ -404,7 +404,18 @@ const data = [
       size: 85,
       capacity: 6,
       description: 'flatDetails',
-      extras: ['flatExtra1', 'flatExtra2', 'flatExtra3'],
+      extras: [
+        'flatExtra1',
+        'flatExtra2',
+        'flatExtra3',
+        'flatExtra4',
+        'flatExtra5',
+        'flatExtra6',
+        'flatExtra7',
+        'flatExtra8',
+        'flatExtra9',
+        'flatExtra10',
+      ],
       images: [
         {
           fields: {

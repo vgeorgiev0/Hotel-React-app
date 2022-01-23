@@ -77,7 +77,6 @@ class SingleRoom extends Component {
               <p>{t(description)}</p>
             </article>
             <article className='info'>
-              {!double && <h3>{t('apartmentInfo')}</h3>}
               {double && <h3>{t('doubleApartmentInfo')}</h3>}
               <h6>
                 {t('perNight')} : € {price}
