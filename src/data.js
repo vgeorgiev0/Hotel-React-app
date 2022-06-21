@@ -23,12 +23,13 @@ import tina7 from './images/tina/7.JPG';
 // import roomEli5 from './images/eli/room/5.jpg';
 // import roomEli6 from './images/eli/room/6.jpg';
 
-import apartmentEli1 from './images/eli/apartment/1.jpg';
+import apartmentEli1 from './images/eli/apartment/main.png';
 import apartmentEli2 from './images/eli/apartment/2.jpg';
 import apartmentEli3 from './images/eli/apartment/3.jpg';
 import apartmentEli4 from './images/eli/apartment/4.jpg';
 import apartmentEli5 from './images/eli/apartment/5.jpg';
-import apartmentEli6 from './images/eli/apartment/6.jpg';
+import apartmentEli6 from './images/eli/apartment/1.jpg';
+import apartmentEli7 from './images/eli/apartment/6.jpg';
 
 import flat1 from './images/flat/1.jpg';
 import flat2 from './images/flat/2.jpg';
@@ -49,26 +50,31 @@ const data = [
     fields: {
       name: 'dekiTitle',
       slug: 'apartment-deki',
+      featured: true,
       double: true,
       doubleDetails: 'doubleDetails',
-      firstRoom: [
-        {
-          fields: {
-            name: 'firstRoomDeki',
-            price: 20,
-            capacity: 2,
-          },
+      firstRoom: {
+        fields: {
+          name: 'firstRoom',
+          price: 20,
+          capacity: 2,
+          description: 'roomDetails',
+          extras: ['dekiExtra1', 'dekiExtra2', 'roomsDekiExtra1', 'dekiExtra4'],
+          images: [],
         },
-      ],
-      secondRoom: [
-        {
-          fields: {
-            name: 'secondRoomDeki',
-            price: 20,
-            capacity: 2,
-          },
+      },
+
+      secondRoom: {
+        fields: {
+          name: 'secondRoom',
+          price: 20,
+          capacity: 2,
+          description: 'roomDetails',
+          extras: ['dekiExtra1', 'dekiExtra2', 'roomsDekiExtra1', 'dekiExtra4'],
+          images: [],
         },
-      ],
+      },
+
       price: 45,
       size: 54,
       capacity: 4,
@@ -289,28 +295,41 @@ const data = [
       slug: 'apartment-eli',
       double: true,
       doubleDetails: 'doubleDetails',
-      firstRoom: [
-        {
-          fields: {
-            name: 'firstRoomEli',
-            price: 25,
-            capacity: 2,
-          },
+      firstRoom: {
+        fields: {
+          name: 'firstRoom',
+          price: 25,
+          capacity: 2,
+          extras: [
+            'apartmentEliExtra1',
+            'apartmentEliExtra2',
+            'apartmentEliExtra3',
+            'apartmentEliExtra4',
+            'apartmentEliExtra5',
+            'apartmentEliExtra6',
+          ],
         },
-      ],
-      secondRoom: [
-        {
-          fields: {
-            name: 'secondRoomEli',
-            price: 20,
-            capacity: 2,
-          },
+      },
+
+      secondRoom: {
+        fields: {
+          name: 'secondRoom',
+          price: 20,
+          capacity: 2,
+          extras: [
+            'apartmentEliExtra1',
+            'apartmentEliExtra2',
+            'apartmentEliExtra3',
+            'apartmentEliExtra4',
+            'apartmentEliExtra5',
+            'apartmentEliExtra6',
+          ],
         },
-      ],
+      },
+
       price: 40,
       size: 36,
       capacity: 2,
-      featured: true,
       description: 'apartmentEliDetails',
       extras: [
         'apartmentEliExtra1',
@@ -364,6 +383,13 @@ const data = [
             },
           },
         },
+        {
+          fields: {
+            file: {
+              url: apartmentEli7,
+            },
+          },
+        },
       ],
     },
   },
@@ -378,7 +404,18 @@ const data = [
       size: 85,
       capacity: 6,
       description: 'flatDetails',
-      extras: ['flatExtra1', 'flatExtra2', 'flatExtra3'],
+      extras: [
+        'flatExtra1',
+        'flatExtra2',
+        'flatExtra3',
+        'flatExtra4',
+        'flatExtra5',
+        'flatExtra6',
+        'flatExtra7',
+        'flatExtra8',
+        'flatExtra9',
+        'flatExtra10',
+      ],
       images: [
         {
           fields: {

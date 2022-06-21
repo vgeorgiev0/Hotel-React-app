@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useHistory } from 'react-router';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -28,6 +29,8 @@ export default function ContactContainer() {
   const tel = <Trans i18nKey='phone'></Trans>;
   const submitBtn = <Trans i18nKey='submitBtn'></Trans>;
 
+  const history = useHistory();
+
   const {
     register,
     handleSubmit,
@@ -46,6 +49,9 @@ export default function ContactContainer() {
         'You have successfully sent a message. We will contact you soon.',
         'success'
       );
+      setTimeout(function () {
+        history.push('/');
+      }, 1000);
       emailjs
         .sendForm(
           'service_sm8euqc',

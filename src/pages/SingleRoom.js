@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import defaultBcg from '../images/DSCN8304.JPG';
 import Banner from '../components/Banner';
 import { Link } from 'react-router-dom';
 import { RoomContext } from '../context';
 import RoomImage from '../components/StyledHero';
 import { withTranslation } from 'react-i18next';
+import ReactGA from 'react-ga';
 
 class SingleRoom extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class SingleRoom extends Component {
     this.state = {
       slug: this.props.match.params.slug,
       defaultBcg,
+      apartment: 'apartment' || 'flatName',
     };
   }
   static contextType = RoomContext;
@@ -21,13 +23,17 @@ class SingleRoom extends Component {
   render() {
     const { getRoom } = this.context;
     const room = getRoom(this.state.slug);
+    const { t } = this.props;
+
+    ReactGA.initialize('UA-217800648-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
     if (!room) {
       return (
         <div className='error'>
           <h3>No such room could be found...</h3>
           <Link to='/apartments' className='btn-primary'>
-            Back to apartments
+            {t('backToApartments')}
           </Link>
         </div>
       );
@@ -41,22 +47,23 @@ class SingleRoom extends Component {
       extras,
       images,
       double,
+      // doubleDetails,
       firstRoom,
       secondRoom,
-      doubleDetails,
     } = room;
-
-    console.log(firstRoom);
-    console.log(secondRoom);
 
     const [mainImg, ...defaultImg] = images;
 
-    const { t } = this.props;
+    let apartmentName = this.state.apartment;
+
+    if (this.state.slug === 'flat') {
+      apartmentName = '';
+    }
 
     return (
       <div>
         <RoomImage img={mainImg || this.state.defaultBcg}>
-          <Banner title={` ${t('apartment')} ${t(name)} `}>
+          <Banner title={` ${t(apartmentName)} ${t(name)} `}>
             <Link to='/apartments' className='btn-primary'>
               {t('backToApartments')}
             </Link>
@@ -74,7 +81,6 @@ class SingleRoom extends Component {
               <p>{t(description)}</p>
             </article>
             <article className='info'>
-              {!double && <h3>{t('apartmentInfo')}</h3>}
               {double && <h3>{t('doubleApartmentInfo')}</h3>}
               <h6>
                 {t('perNight')} : € {price}
@@ -101,12 +107,64 @@ class SingleRoom extends Component {
         </section>
         {double && (
           <section className='room-extras'>
-            <h6 className='loading'>Book only one of the rooms</h6>
-            <ul className='extras'>
-              <li>{doubleDetails}</li>
-            </ul>
+            <h2 className='loading' style={{ marginTop: '4rem' }}>
+              {t('doubleDetails')}
+            </h2>
+            <div className='single-room-info'>
+              <article className='desc'>
+                <h3 style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                  {t(firstRoom.fields.name)}
+                </h3>
+                <ul className='extras' style={{ textAlign: 'center' }}>
+                  {firstRoom.fields.extras.map((item, index) => {
+                    return <li key={index}>* {t(item)}</li>;
+                  })}
+                  <li>
+                    <h6 style={{ fontWeight: '300' }}>
+                      {t('perNight')} : € {firstRoom.fields.price}
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 style={{ fontWeight: '300' }}>
+                      {t('roomCapacity')} :
+                      {firstRoom.fields.capacity > 1
+                        ? ` ${firstRoom.fields.capacity} ${t('people')} `
+                        : `${firstRoom.fields.capacity} ${t('person')}`}
+                    </h6>
+                  </li>
+                </ul>
+              </article>
+              <article className='desc'>
+                <h3 style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                  {t(secondRoom.fields.name)}
+                </h3>
+                <ul className='extras' style={{ textAlign: 'center' }}>
+                  {secondRoom.fields.extras.map((item, index) => {
+                    return <li key={index}>* {t(item)}</li>;
+                  })}
+                  <li>
+                    <h6 style={{ fontWeight: '300' }}>
+                      {t('perNight')} : € {secondRoom.fields.price}
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 style={{ fontWeight: '300' }}>
+                      {t('roomCapacity')} :
+                      {secondRoom.fields.capacity > 1
+                        ? ` ${secondRoom.fields.capacity} ${t('people')} `
+                        : `${secondRoom.fields.capacity} ${t('person')}`}
+                    </h6>
+                  </li>
+                </ul>
+              </article>
+            </div>
           </section>
         )}
+        <div className='loading' style={{ paddingBottom: '10vh' }}>
+          <Link to='/contact' className='btn-primary'>
+            {t('book')}
+          </Link>
+        </div>
       </div>
     );
   }

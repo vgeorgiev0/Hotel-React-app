@@ -16,25 +16,3 @@ const Intro = (props) => {
 };
 
 export default Intro;
-
-//  <Tabs className='Tabs'>
-//    <TabList className='TabList'>
-//      <Tab className='Tab'>{introAbout}</Tab>
-//      <Tab className='Tab'>{introAccommodation}</Tab>
-//      <Tab className='Tab'>{introRestaurant} </Tab>
-//      <Tab className='Tab'>{introEntertainment} </Tab>
-//    </TabList>
-
-//    <TabPanel className='TabPanel'>
-//      <p>{introAboutDesc}</p>
-//    </TabPanel>
-//    <TabPanel className='TabPanel'>
-//      <p>{introAccommodationDesc}</p>
-//    </TabPanel>
-//    <TabPanel className='TabPanel'>
-//      <p>{introRestaurantDesc} </p>
-//    </TabPanel>
-//    <TabPanel className='TabPanel'>
-//      <p>{introEntertainmentDesc} </p>
-//    </TabPanel>
-//  </Tabs>;

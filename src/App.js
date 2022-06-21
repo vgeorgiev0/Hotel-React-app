@@ -9,26 +9,26 @@ import {
 import './App.css';
 import { useTranslation } from 'react-i18next';
 
-import v1rt from './images/V1rtuoso.gif';
+import ReactGA from 'react-ga';
 
 import Navbar from './components/Navbar';
 
 import Footer from './components/Footer';
 
+import v1rt from './images/V1rtuoso.gif';
 import bgFlag from './images/flag/bgFlag.png';
 import rsFlag from './images/flag/rsFlag.png';
 import usFlag from './images/flag/usFlag.png';
 
-const Restaurant = React.lazy(() => import('./pages/Restaurant'));
-const Rooms = React.lazy(() => import('./pages/Rooms'));
 const Home = React.lazy(() => import('./pages/Home'));
+const Rooms = React.lazy(() => import('./pages/Rooms'));
 const SingleRoom = React.lazy(() => import('./pages/SingleRoom'));
+const Restaurant = React.lazy(() => import('./pages/Restaurant'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Error = React.lazy(() => import('./pages/Error'));
 
 const _ScrollToTop = (props) => {
   const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -41,12 +41,18 @@ const ScrollToTop = withRouter(_ScrollToTop);
 function App() {
   const { i18n } = useTranslation();
 
+  useEffect(() => {
+    ReactGA.initialize('UA-217800648-1');
+
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   };
 
   return (
-    <div>
+    <main>
       <Router>
         <Navbar />
         <br />
@@ -109,7 +115,7 @@ function App() {
           />
         </a>
       </div>
-    </div>
+    </main>
   );
 }
 

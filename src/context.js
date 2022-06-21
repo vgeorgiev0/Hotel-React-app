@@ -24,6 +24,7 @@ export default class RoomProvider extends Component {
     // this.getData
     let rooms = this.formatData(items);
     let featuredRooms = rooms.filter((room) => room.featured === true);
+    let double = rooms.filter((room) => room.double === true);
     let maxPrice = Math.max(...rooms.map((item) => item.price));
     let maxSize = Math.max(...rooms.map((item) => item.size));
     this.setState({
@@ -34,6 +35,7 @@ export default class RoomProvider extends Component {
       price: maxPrice,
       maxPrice,
       maxSize,
+      double,
     });
   }
 
@@ -41,8 +43,11 @@ export default class RoomProvider extends Component {
     let tempItems = items.map((item) => {
       let id = item.sys.id;
       let images = item.fields.images.map((image) => image.fields.file.url);
-
-      let room = { ...item.fields, images, id };
+      let room = {
+        ...item.fields,
+        images,
+        id,
+      };
       return room;
     });
     return tempItems;

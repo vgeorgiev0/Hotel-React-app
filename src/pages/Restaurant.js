@@ -1,42 +1,63 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '../components/Banner';
 import Hero from '../components/Hero';
-import Title from '../components/Title';
-import CarouselRestaurant from '../components/CarouselRestaurant';
-import { Parallax } from 'react-parallax';
-
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Trans } from 'react-i18next';
-import mainImage from '../images/restaurant/001Res.jpg';
+import ReactGa from 'react-ga';
+import CarouselRestaurant from '../components/CarouselRestaurant';
+import Aos from 'aos';
 import img1 from '../images/restaurant/03Res.jpg';
 import img2 from '../images/restaurant/13Res.jpg';
 import img3 from '../images/restaurant/11Res.jpg';
 
 const Restaurant = () => {
-  const mainTitle = (
-    <Trans i18nKey='mainTitle'>Welcome to Rural household Morava ŽIS</Trans>
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
+  useEffect(() => {
+    ReactGa.initialize('UA-217800648-1');
+
+    ReactGa.pageview('/restaurant');
+  });
+
+  const restaurantTitle = <Trans i18nKey='restaurantTitle'></Trans>;
+  const restaurantDescription = (
+    <Trans i18nKey='restaurantDescription'>Wonderful place to enjoy.</Trans>
   );
-  const mainSubtitle = (
-    <Trans i18nKey='mainSubtitle'>Wonderful place to enjoy.</Trans>
-  );
+  const about = <Trans i18nKey='about' />;
+  const restaurantOp = <Trans i18nKey='restaurantOp' />;
+  const restaurantServTitle1 = <Trans i18nKey='restaurantServTitle1' />;
+  const restaurantServDesc1 = <Trans i18nKey='restaurantServDesc1' />;
+  const restaurantServTitle2 = <Trans i18nKey='restaurantServTitle2' />;
+  const restaurantServTitle3 = <Trans i18nKey='restaurantServTitle3' />;
+  const restaurantServDesc3 = <Trans i18nKey='restaurantServDesc3' />;
+  const restaurantGallery = <Trans i18nKey='restaurantGallery' />;
+  const restaurantFooter = <Trans i18nKey='restaurantFooter' />;
+
   return (
     <div className='restaurantBody'>
-      <Parallax bgImage={mainImage} strength={450}>
-        <div className='para'>
-          <Banner
-            style={{ backgroundColor: '#E9ECEF' }}
-            title={mainTitle}
-            subtitle={mainSubtitle}
-          >
-            <Link to='/contact' className='btn-primary'>
-              <Trans i18nKey='about'>Contact Us</Trans>
-            </Link>
-          </Banner>
-        </div>
-      </Parallax>
-      <div className='services'>
-        <Title title={'Have a celebration with us!'} />
-      </div>
+      <Helmet>
+        <title>Our Restaurant</title>
+        <meta
+          name='description'
+          content='We pay special attention to our beautiful restaurant with a capacity of a hundred guests, where for years we organize unforgettable celebrations: weddings, first birthdays, coming of age and others.'
+        />
+        <link rel='canonical' href='/restaurant' />
+      </Helmet>
+      <Hero hero='restaurantHero'>
+        <Banner title={restaurantTitle} subtitle={restaurantDescription}>
+          <Link to='/contact' className='btn-primary'>
+            {about}
+          </Link>
+        </Banner>
+      </Hero>
+      <h2
+        style={{ textAlign: 'center', marginBottom: '20vh', marginTop: '20vh' }}
+      >
+        {restaurantOp}
+      </h2>
       <div className='columnLayout'>
         <div className='sectionContainer'>
           <div className='imageColumn'>
@@ -44,25 +65,32 @@ const Restaurant = () => {
           </div>
 
           <div className='columnContent' style={{ background: '#E9ECEF' }}>
-            <div className='contentContainer'>
-              <h5>We'll be happy to host your next event!</h5>
-              <p>
-                No matter what occasion you're celebrating — birthday,
-                anniversary, marriage, baby shower — we offer customized menus
-                for your group size. Celebrate together with more than 110
-                people in our ceremonial hall where we organize all sorts of
-                celebrations such as weddings, birthdays, banquets, and all of
-                your happy moments.
-              </p>
+            <div
+              className='contentContainer'
+              data-aos='fade-zoom-in'
+              data-aos-offset='200'
+              data-aos-easing='ease-in-sine'
+              data-aos-duration='600'
+            >
+              <h5>{restaurantServTitle1}</h5>
+              <p>{restaurantServDesc1}</p>
             </div>
           </div>
         </div>
         <div className='sectionContainer'>
           <div className='columnContent' style={{ background: '#E9ECEF' }}>
-            <div className='contentContainer'>
-              <h5>Capacity of up to 110 people in our ceremonial hall</h5>
+            <div
+              className='contentContainer'
+              data-aos='fade-zoom-in'
+              data-aos-offset='200'
+              data-aos-easing='ease-in-sine'
+              data-aos-duration='600'
+            >
+              <h5 style={{ textAlign: 'center' }}>{restaurantServTitle2}</h5>
               <div className='loading'>
-                <button className='btn-primary'>Contact Us</button>
+                <Link to='/contact' className='btn-primary'>
+                  {about}
+                </Link>
               </div>
             </div>
           </div>
@@ -76,25 +104,35 @@ const Restaurant = () => {
           </div>
 
           <div className='columnContent' style={{ background: '#E9ECEF' }}>
-            <div className='contentContainer'>
-              <h5>The best country restaurant near Nis</h5>
-              <p>
-                We offer a variety of dishes and drinks made with fresh
-                ingredients and traditional Serbian recipes.{' '}
-              </p>
+            <div
+              className='contentContainer'
+              data-aos='fade-zoom-in'
+              data-aos-offset='200'
+              data-aos-easing='ease-in-sine'
+              data-aos-duration='600'
+            >
+              <h5>{restaurantServTitle3}</h5>
+              <p>{restaurantServDesc3}</p>
             </div>
           </div>
         </div>
       </div>
-
       <div>
+        <h3 style={{ textAlign: 'center', marginBottom: '10vh' }}>
+          {restaurantGallery}
+        </h3>
         <div style={{ marginBottom: '20vh' }}>
           <CarouselRestaurant />
         </div>
       </div>
-      <div>
-        <Hero hero='restaurantHero'>
-          <h6>We'll be happy to host your next event!</h6>
+      <div
+        data-aos='fade-zoom-in'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
+        <Hero hero='restaurantFooterHero'>
+          <h6>{restaurantFooter}</h6>
           <Link to='/contact' className='btn-primary'>
             <Trans i18nKey='about'>Contact Us</Trans>
           </Link>

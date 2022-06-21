@@ -41,14 +41,15 @@ const Navbar = () => {
               {home}
             </Link>
           </li>
-          <li>
-            <Link onClick={handleToggle} to='/restaurant'>
-              {restaurant}
-            </Link>
-          </li>
+
           <li>
             <Link onClick={handleToggle} to='/apartments'>
               {apartments}
+            </Link>
+          </li>
+          <li>
+            <Link onClick={handleToggle} to='/restaurant'>
+              {restaurant}
             </Link>
           </li>
           <li>

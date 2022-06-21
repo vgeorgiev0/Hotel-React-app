@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import Banner from '../components/Banner';
 import Hero from '../components/Hero';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Trans } from 'react-i18next';
+import ReactGa from 'react-ga';
 import Services from '../components/Services';
 import FeaturedRooms from '../components/FeaturedRooms';
 import SimpleMap from '../components/Maps';
-import { Trans } from 'react-i18next';
 import Carousel from '../components/Carousel';
 import Intro from '../components/Intro';
 import Aos from 'aos';
@@ -18,6 +20,12 @@ const Home = (props) => {
     Aos.init({ duration: 2000 });
   }, []);
 
+  useEffect(() => {
+    ReactGa.initialize('UA-217800648-1');
+
+    ReactGa.pageview('/');
+  });
+
   const mainTitle = (
     <Trans i18nKey='mainTitle'>Welcome to Rural household Morava ŽIS</Trans>
   );
@@ -29,6 +37,14 @@ const Home = (props) => {
 
   return (
     <div className='grids' id='home'>
+      <Helmet>
+        <title>Home page</title>
+        <meta
+          name='description'
+          content='Welcome to Rural household Morava ŽIS. A place where you can feel at home.'
+        />
+        <link rel='canonical' href='/' />
+      </Helmet>
       <Hero>
         <Banner title={mainTitle} subtitle={mainSubtitle}>
           <Link to='/apartments' className='btn-primary'>
