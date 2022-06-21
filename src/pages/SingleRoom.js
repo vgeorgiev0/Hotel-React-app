@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import defaultBcg from '../images/DSCN8304.JPG';
 import Banner from '../components/Banner';
 import { Link } from 'react-router-dom';
@@ -30,9 +30,9 @@ class SingleRoom extends Component {
 
     if (!room) {
       return (
-        <div className='error'>
+        <div className="error">
           <h3>No such room could be found...</h3>
-          <Link to='/apartments' className='btn-primary'>
+          <Link to="/apartments" className="btn-primary">
             {t('backToApartments')}
           </Link>
         </div>
@@ -64,23 +64,23 @@ class SingleRoom extends Component {
       <div>
         <RoomImage img={mainImg || this.state.defaultBcg}>
           <Banner title={` ${t(apartmentName)} ${t(name)} `}>
-            <Link to='/apartments' className='btn-primary'>
+            <Link to="/apartments" className="btn-primary">
               {t('backToApartments')}
             </Link>
           </Banner>
         </RoomImage>
-        <section className='single-room'>
-          <div className='single-room-images'>
+        <section className="single-room">
+          <div className="single-room-images">
             {defaultImg.map((item, index) => {
               return <img key={index} src={item} alt={name} />;
             })}
           </div>
-          <div className='single-room-info'>
-            <article className='desc'>
+          <div className="single-room-info">
+            <article className="desc">
               <h3>{t('apartmentDetail')}</h3>
               <p>{t(description)}</p>
             </article>
-            <article className='info'>
+            <article className="info">
               {double && <h3>{t('doubleApartmentInfo')}</h3>}
               <h6>
                 {t('perNight')} : € {price}
@@ -97,25 +97,25 @@ class SingleRoom extends Component {
             </article>
           </div>
         </section>
-        <section className='room-extras'>
+        <section className="room-extras">
           <h6>{t('roomExtras')}</h6>
-          <ul className='extras'>
+          <ul className="extras">
             {extras.map((item, index) => {
               return <li key={index}>* {t(item)}</li>;
             })}
           </ul>
         </section>
         {double && (
-          <section className='room-extras'>
-            <h2 className='loading' style={{ marginTop: '4rem' }}>
+          <section className="room-extras">
+            <h2 className="loading" style={{ marginTop: '4rem' }}>
               {t('doubleDetails')}
             </h2>
-            <div className='single-room-info'>
-              <article className='desc'>
+            <div className="single-room-info">
+              <article className="desc">
                 <h3 style={{ textAlign: 'center', marginBottom: '3rem' }}>
                   {t(firstRoom.fields.name)}
                 </h3>
-                <ul className='extras' style={{ textAlign: 'center' }}>
+                <ul className="extras" style={{ textAlign: 'center' }}>
                   {firstRoom.fields.extras.map((item, index) => {
                     return <li key={index}>* {t(item)}</li>;
                   })}
@@ -134,11 +134,11 @@ class SingleRoom extends Component {
                   </li>
                 </ul>
               </article>
-              <article className='desc'>
+              <article className="desc">
                 <h3 style={{ textAlign: 'center', marginBottom: '3rem' }}>
                   {t(secondRoom.fields.name)}
                 </h3>
-                <ul className='extras' style={{ textAlign: 'center' }}>
+                <ul className="extras" style={{ textAlign: 'center' }}>
                   {secondRoom.fields.extras.map((item, index) => {
                     return <li key={index}>* {t(item)}</li>;
                   })}
@@ -160,8 +160,8 @@ class SingleRoom extends Component {
             </div>
           </section>
         )}
-        <div className='loading' style={{ paddingBottom: '10vh' }}>
-          <Link to='/contact' className='btn-primary'>
+        <div className="loading" style={{ paddingBottom: '10vh' }}>
+          <Link to="/contact" className="btn-primary">
             {t('book')}
           </Link>
         </div>
