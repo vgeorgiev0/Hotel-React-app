@@ -82,6 +82,7 @@ export default function FullWidthTabs() {
         marginRight: 'auto',
         marginBottom: '10vh',
         marginTop: '10vh',
+        borderRadius:'70px'
       }}
     >
       <AppBar position='static'>
