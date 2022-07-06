@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Loading = () => {
+const Loading = ({children}) => {
   return (
     <div className='loading'>
-      <h4>Loading...</h4>
+      {children}
     </div>
   );
 };
