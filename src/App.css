@@ -304,7 +304,7 @@ h6 {
 .footer {
   padding: 1rem 0;
   background: var(--primaryColor);
-  text-align: left;
+  text-align: center;
   font-size: auto;
   margin-bottom: 0%;
   padding-bottom: 16px;
@@ -312,12 +312,12 @@ h6 {
 }
 
 .footer-center {
-  width: 70vw;
   margin-left: 60px;
+  margin-right: 60px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-row-gap: 2rem;
-  grid-column-gap: 90px;
+  grid-column-gap: 20vh;
 }
 .footer h6 {
   text-align: center;
