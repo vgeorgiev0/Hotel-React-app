@@ -975,7 +975,7 @@ textarea {
 /* Navigation buttons */
 
 .navigationButtons div {
-  @apply flex justify-evenly w-full lg:ml-3;
+  @apply flex justify-evenly w-full lg:ml-0;
 }
 
 .navigationButtons {
