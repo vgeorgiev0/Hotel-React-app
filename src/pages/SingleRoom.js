@@ -43,7 +43,6 @@ class SingleRoom extends Component {
       description,
       capacity,
       size,
-      price,
       extras,
       images,
       double,
@@ -83,9 +82,6 @@ class SingleRoom extends Component {
             <article className="info">
               {double && <h3>{t('doubleApartmentInfo')}</h3>}
               <h6>
-                {t('perNight')} : € {price}
-              </h6>
-              <h6>
                 {t('roomSize')} : {size} {t('sqr')}
               </h6>
               <h6>
@@ -121,11 +117,6 @@ class SingleRoom extends Component {
                   })}
                   <li>
                     <h6 style={{ fontWeight: '300' }}>
-                      {t('perNight')} : € {firstRoom.fields.price}
-                    </h6>
-                  </li>
-                  <li>
-                    <h6 style={{ fontWeight: '300' }}>
                       {t('roomCapacity')} :
                       {firstRoom.fields.capacity > 1
                         ? ` ${firstRoom.fields.capacity} ${t('people')} `
@@ -142,11 +133,6 @@ class SingleRoom extends Component {
                   {secondRoom.fields.extras.map((item, index) => {
                     return <li key={index}>* {t(item)}</li>;
                   })}
-                  <li>
-                    <h6 style={{ fontWeight: '300' }}>
-                      {t('perNight')} : € {secondRoom.fields.price}
-                    </h6>
-                  </li>
                   <li>
                     <h6 style={{ fontWeight: '300' }}>
                       {t('roomCapacity')} :

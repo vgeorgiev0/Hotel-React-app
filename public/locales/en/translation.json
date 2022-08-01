@@ -16,10 +16,10 @@
   "funDesc": "We offer a swimming pool, pool table, and table tennis for all our guests to enjoy their time here. It is an ideal place to unwind and relax after work or school.",
   "acc": "Home away from home",
   "accDesc": "Our accommodations are always clean and tidy, making them feel just like home away from home. You will feel like you've been welcomed into our family.",
-  "featured": "Featured Rooms",
+  "featured": "Featured apartments",
   "aboutUs": "About us",
   "address": "Address",
-  "addressDesc": "Mezgraja vilage, JNA 8, R. Srbija",
+  "addressDesc": "Mezgraja vilage, JNA 7, R. Srbija",
   "phone": "Phone",
   "email": "E-mail",
   "apartmentsTitle": "Our Apartments",
@@ -128,5 +128,10 @@
   "secondRoom": "Room \"B\"",
   "roomDetails": "Room Details",
   "roomsDekiExtra1": "Kitchen",
-  "book": "request this apartment"
+  "book": "request this apartment",
+    "howToFindUs": "How to find us",
+  "fromBelgrade": "From Belgrade",
+  "fromSofia": "From Sofia",
+  "fromSkopie": "From Skopie",
+  "findUsVideo": "Video Directions"
 }

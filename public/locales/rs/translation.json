@@ -19,7 +19,7 @@
   "featured": "Deo naših apartmana",
   "aboutUs": "O nama",
   "address": "Adresa",
-  "addressDesc": "JNA 8, Mezgraja, Srbija",
+  "addressDesc": "JNA 7, Mezgraja, Srbija",
   "phone": "Telefon",
   "email": "E-mail",
   "apartmentsTitle": "Naši apartmani",
@@ -128,5 +128,10 @@
   "secondRoom": "Soba \"B\"",
   "roomDetails": "Detalji o sobama",
   "roomsDekiExtra1": "Kuhinja",
-  "book": "Raspitajte se za ovaj stan"
+  "book": "Raspitajte se za ovaj stan",
+    "howToFindUs": "Kako da nas pronađete",
+  "fromBelgrade": "Iz Beograda",
+  "fromSofia": "Iz Sofije",
+  "fromSkopie": "Iz Skopieja",
+  "findUsVideo": "Video uputstva"
 }

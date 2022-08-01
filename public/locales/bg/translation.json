@@ -19,7 +19,7 @@
   "featured": "Част от нашите Апартаменти",
   "aboutUs": "За нас",
   "address": "Адрес",
-  "addressDesc": "JNA 8, Мезграя, Сърбия",
+  "addressDesc": "JNA 7, Мезграя, Сърбия",
   "phone": "Телефон",
   "email": "E-майл",
   "apartmentsTitle": "Нашите Апартаменти",
@@ -128,5 +128,10 @@
   "roomDetails": "Детайли относно Стаята",
   "secondRoom": "Стая \"Б\"",
   "roomsDekiExtra1": "Кухня",
-  "book": "Направете запитване за този апартамент"
+  "book": "Направете запитване за този апартамент",
+  "howToFindUs": "Как да ни намерите",
+  "fromBelgrade": "От Белград",
+  "fromSofia": "От София",
+  "fromSkopie": "От Скопие",
+  "findUsVideo": "Видео насоки"
 }

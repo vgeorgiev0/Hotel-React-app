@@ -4,6 +4,8 @@ import Title from './Title';
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import PlaceIcon from "@mui/icons-material/Place";
+// import FacebookIcon from "@mui/icons-material/Facebook";
+// import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
   const aboutInfo = [
@@ -22,7 +24,8 @@ const Footer = () => {
     {
       title: <Trans i18nKey='email'></Trans>,
       icon: <EmailIcon/>,
-      description: `slobodan.zivadinovic
+      description: `slobodan.
+      zivadinovic
       @gmail.com`,
       info: 'mailto:slobodan.zivadinovic@gmail.com',
     },
@@ -31,9 +34,9 @@ const Footer = () => {
 
   return (
     <>
-      <footer className='footer'>
+      <footer className="footer">
         <Title title={aboutUs} />
-        <div className='footer-center'>
+        <div className="footer-center">
           {aboutInfo.map((item, index) => {
             return (
               <article key={index} className="footer">
@@ -44,9 +47,16 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   href={item.info}
                 >
-                  <div style={{alignItems:'center', justifyContent:'center', display:'flex', marginBottom:'1rem'}}>
+                  <div
+                    style={{
+                      alignItems: "center",
+                      justifyContent: "center",
+                      display: "flex",
+                      marginBottom: "1rem",
+                    }}
+                  >
                     {item.icon}
-                    </div>
+                  </div>
                   {item.description}
                   &#8226;
                 </a>
