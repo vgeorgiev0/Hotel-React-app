@@ -4,6 +4,7 @@ import secondPic from "../images/howTo/SecondPicture.jpg";
 import thirdPic from "../images/howTo/ThirdPicture.jpg";
 import beogradNis from "../images/howTo/Beograd-Nis.jpg";
 import skopieNis from "../images/howTo/Skopie-Nis.jpg";
+import skopieNis2 from "../images/howTo/SkopieN.jpg";
 import SofiaNis from "../images/howTo/Sofia-Nis.jpg";
 import { t } from 'i18next';
 
@@ -30,6 +31,8 @@ const [sfp, setSfp] = useState(false)
      !belgradePressed && !skp && !sfp && handleShowMap();
   };
 
+  console.log(imgSrc);
+
   return (
     <div className="containerNavigation">
       <div className="navigationButtons">
@@ -52,6 +55,9 @@ const [sfp, setSfp] = useState(false)
         <div>
           <div className="mapImages">
             <img style={{ height: "266px" }} src={imgSrc} alt="Destination" />
+            {imgSrc === "/static/media/Skopie-Nis.00c63130.jpg" && (
+              <img src={skopieNis2} alt="Skopie-Nis" />
+            )}
             <img src={secondPic} alt="Tol" />
             <img src={thirdPic} alt="Path" />
           </div>
